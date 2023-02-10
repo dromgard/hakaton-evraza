@@ -22,8 +22,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background: #fab72d center no-repeat url("../../images/burger-menu.svg");
-  background-size: 30px;
+  background: #fab72d center no-repeat url("../../images/burger-menu.png");
+  background-size: 24px;
   box-sizing: border-box;
   border-radius: 5px;
 }
