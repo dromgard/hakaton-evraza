@@ -57,3 +57,37 @@
   background: center no-repeat url("../../images/logo.png");
   background-size: 120px 20px;
 }
+
+.section-title {
+  margin: 0;
+  padding: 0;
+  font-family: "Inter", Arial, sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.55;
+  color: #000000;
+}
+
+.info-text {
+  margin: 0;
+  padding: 0;
+  font-family: "Inter", Arial, sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 11px;
+  line-height: 1.3;
+  color: #adadad;
+}
+
+.indicator-yellow {
+  width: 13px;
+  height: 13px;
+  background-color: #fab72d;
+}
+
+.indicator-red {
+  width: 13px;
+  height: 13px;
+  background-color: #e5200d;
+}

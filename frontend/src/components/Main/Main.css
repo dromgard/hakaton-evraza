@@ -1,0 +1,38 @@
+.main {
+  margin: 10px 10px 0;
+  background-color: #fff;
+}
+
+.main__header {
+  margin: 0;
+  padding: 5px 10px;
+  display: flex;
+  flex-direction: row;
+  gap: 14px;
+  align-items: center;
+  background-color: #fafafa;
+  border-bottom: 2px solid #f4f4f4;
+}
+
+.main__header-logo {
+  width: 28px;
+  height: 28px;
+  border-radius: 5px;
+  background: #fab72d;
+}
+
+.main__info {
+  margin: 0;
+  padding: 15px;
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  justify-content: flex-end;
+  text-decoration: none;
+}
+
+.main__info-item {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
