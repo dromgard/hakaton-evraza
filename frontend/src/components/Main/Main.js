@@ -1,3 +1,5 @@
+import Exhauster from "../Exhauster/Exhauster";
+
 function Main() {
   return (
     <main className="main">
@@ -23,9 +25,11 @@ function Main() {
           <div className="indicator-red"></div>
           <p className="info-text">Опасность</p>
         </li>
-
       </ul>
-    </main >
+
+      <Exhauster />
+
+    </main>
   )
 }
 

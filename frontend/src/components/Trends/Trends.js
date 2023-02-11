@@ -1,6 +1,11 @@
+import { Link } from 'react-router-dom'
+
 function Trends() {
   return (
-    <h1>Это секция Trends</h1>
+    <div>
+      <h1>Это секция Trends</h1>
+      <Link to="/"> Back </Link>
+    </div>
   )
 }
 

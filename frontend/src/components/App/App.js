@@ -2,6 +2,7 @@ import Exhauster from "../Exhauster/Exhauster";
 import Header from "../Header/Header";
 import Main from "../Main/Main";
 import Trends from "../Trends/Trends";
+import { Routes, Route } from 'react-router-dom'
 
 function App() {
   return (
@@ -11,9 +12,12 @@ function App() {
       <Header />
 
       {/* А отсюда начинается роутинг */}
-      <Main />
-      <Exhauster />
-      <Trends />
+      <Routes>
+        <Route path='/hakaton-evraza' element={<Main/>} />
+        <Route path='/exhauster' element={<Exhauster/>} />
+        <Route path='/trends' element={<Trends/>} />
+        <Route path='*' element={<Main/>} />
+      </Routes>
 
     </div>
   );

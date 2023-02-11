@@ -1,0 +1,151 @@
+.exhauster{
+    width: 300px;
+    height: 100%;
+
+    border: 1px solid black;
+}
+
+.exhauster__header{
+    height: 40px;
+    padding: 5px 10px 5px 10px;
+
+    color: white;
+    background-color: #6E6E6E;
+
+    display: flex;
+    flex-direction: column;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+
+    align-items: center;
+}
+
+.exhauster__header-name{
+
+    display: flex;
+    flex-direction: row;
+
+    gap: 10px;
+    align-items: center;
+}
+
+.exhauster__body{
+    padding: 5px 10px 5px 10px;
+    height: 100%;
+}
+
+.exhauster__body-router-info{
+    height: 60px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    margin-bottom: 10px;
+}
+
+.exhauster__body-router-info p{
+    font-size: 14px;
+}
+
+.exhauster__body-router-info-date{
+    padding: 6px 10px 6px 10px;
+    border-radius: 6px;
+    background-color: rgb(212, 209, 209);
+}
+.exhauster__body-router-info-date p {
+    margin: 0px;
+}
+
+.exhauster__body-router-info a {
+    font-size: 12px;
+    color: blueviolet;
+}
+
+.exhauster__body-roter-repl{
+    margin-bottom: 10px;
+}
+
+.exhauster__body-roter-repl-date{
+    height: 60px;
+
+    margin-bottom: 10px;
+
+    padding: 6px 10px 6px 10px;
+
+    background-color: #f3f3f3;
+    border-radius: 4px;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    gap: 20px;
+}
+
+.exhauster__body-roter-replt-date_late{
+
+    padding: 6px 10px 6px 10px;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    border-radius: 4px;
+    background-color: #D1D1D1;
+}
+
+.exhauster__body-roter-replt-date_late h4{
+    margin: 0;
+}
+
+.exhauster__body-roter-replt-date_prognosis{
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    gap: 10px;
+}
+
+.exhauster__body-roter-replt-date_prognosis div{
+    display: flex;
+    flex-direction: column;
+    gap: 6px
+}
+
+.exhauster__body-roter-replt-date_prognosis p{
+    margin: 0;
+}
+.exhauster__body-roter-replt-date_prognosis h5{
+    margin: 0;
+}
+.exhauster__body-roter-replt-date_prognosis svg{
+    align-self: flex-start;
+}
+
+.exhauster__body-img{
+    width: auto;
+    height: 160px;
+    background: #fff center no-repeat url("../../images/extruder.png");
+}
+
+/* Warning */
+.exhauster__body-warning-title{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    gap: 10px;
+}
+
+
+/* Bearings */
+.exhauster__body-bearings-title{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    gap: 10px;
+}
