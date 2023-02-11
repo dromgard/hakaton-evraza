@@ -30,7 +30,7 @@ Backend реализован на ...
 
 ### Публикация в интернете:
 
-Тут будет ссылка.
+[Посмотреть - https://hakaton-evraza.vercel.app/](https://hakaton-evraza.vercel.app/)
 
 ### Запуск проекта
 
