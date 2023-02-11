@@ -1,0 +1,29 @@
+.aglomachine {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.aglomachine__title {
+  margin: 0;
+  padding: 10px 15px;
+  font-family: "Inter", Arial, sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.3;
+  background-color: #fafafa;
+  color: #adadad;
+  border-radius: 5px 5px 0 0;
+}
+
+.aglomachine__list {
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 245px);
+  justify-content: space-between;
+  list-style: none;
+}

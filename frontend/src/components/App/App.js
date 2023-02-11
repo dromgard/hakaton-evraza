@@ -1,3 +1,4 @@
+import React from "react";
 import Exhauster from "../Exhauster/Exhauster";
 import Header from "../Header/Header";
 import Main from "../Main/Main";
@@ -13,10 +14,10 @@ function App() {
 
       {/* А отсюда начинается роутинг */}
       <Routes>
-        <Route path='/hakaton-evraza' element={<Main/>} />
-        <Route path='/exhauster' element={<Exhauster/>} />
-        <Route path='/trends' element={<Trends/>} />
-        <Route path='*' element={<Main/>} />
+        <Route path='/' element={<Main />} />
+        <Route path='/exhauster' element={<Exhauster />} />
+        <Route path='/trends' element={<Trends />} />
+        <Route path='*' element={<Main />} />
       </Routes>
 
     </div>

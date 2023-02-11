@@ -1,4 +1,5 @@
-import Exhauster from "../Exhauster/Exhauster";
+import React from "react";
+import Aglomachine from "../Aglomachine/Aglomachine";
 
 function Main() {
   return (
@@ -26,8 +27,11 @@ function Main() {
           <p className="info-text">Опасность</p>
         </li>
       </ul>
-
-      <Exhauster />
+      <ul className="main__aglomachine-list">
+        <li><Aglomachine /></li>
+        <li><Aglomachine /></li>
+        <li><Aglomachine /></li>
+      </ul>
 
     </main>
   )

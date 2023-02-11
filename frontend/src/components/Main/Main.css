@@ -28,11 +28,20 @@
   flex-direction: row;
   gap: 20px;
   justify-content: flex-end;
-  text-decoration: none;
+  list-style: none;
 }
 
 .main__info-item {
   display: flex;
   flex-direction: row;
   gap: 10px;
+}
+
+.main__aglomachine-list {
+  margin: 0;
+  padding: 0 15px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 500px);
+  list-style: none;
+  justify-content: space-between;
 }
