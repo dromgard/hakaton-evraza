@@ -2,11 +2,10 @@ import React, { useContext } from "react";
 import Aglomachine from "../Aglomachine/Aglomachine";
 import { DataContext } from "../contexts/DataContext";
 
-function Main() {
+function Main({ setExhausterData }) {
 
   // Получаем массив данных из контекста.
   const currentDataTest = useContext(DataContext);
-  // console.log(currentDataTest);
 
   // Создаем разметку для массива Агломашин.
   const aglomachineMarkup = currentDataTest.map((item) => (
@@ -14,6 +13,7 @@ function Main() {
       <Aglomachine
         number={item.number}
         exhausters={item.exhausters}
+        setExhausterData={setExhausterData}
       />
     </li>
   ))

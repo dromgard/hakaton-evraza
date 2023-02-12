@@ -15,43 +15,43 @@ export const dataTest = [
             id: 0,
             name: "№1 п-к",
             temperature: 0,
-            pressure: 0
+            pressure: 1
           },
           {
             id: 1,
             name: "№2 п-к",
-            temperature: 0,
+            temperature: 1,
             pressure: 0
           },
           {
             id: 2,
             name: "№3 п-к",
-            temperature: 0,
+            temperature: 1,
             pressure: 0
           },
           {
             id: 3,
             name: "№4 п-к",
             temperature: 0,
-            pressure: 0
+            pressure: 1
           },
           {
             id: 4,
             name: "№5 п-к",
             temperature: 0,
-            pressure: 0
+            pressure: 1
           },
           {
             id: 5,
             name: "№6 п-к",
-            temperature: 0,
-            pressure: 0
+            temperature: 1,
+            pressure: 2
           },
           {
             id: 6,
             name: "№7 п-к",
-            temperature: 0,
-            pressure: 0
+            temperature: 1,
+            pressure: 2
           },
           {
             id: 7,
@@ -62,14 +62,14 @@ export const dataTest = [
           {
             id: 8,
             name: "№9 п-к",
-            temperature: 0,
-            pressure: 0
+            temperature: 2,
+            pressure: 2
           },
           {
             id: 9,
             name: "Уровень масла",
-            temperature: 0,
-            pressure: 0
+            temperature: 2,
+            pressure: 2
           }
         ]
       },
@@ -376,62 +376,62 @@ export const dataTest = [
           {
             id: 0,
             name: "№1 п-к",
-            temperature: 0,
-            pressure: 0
+            temperature: 1,
+            pressure: 2
           },
           {
             id: 1,
             name: "№2 п-к",
-            temperature: 0,
-            pressure: 0
+            temperature: 2,
+            pressure: 2
           },
           {
             id: 2,
             name: "№3 п-к",
-            temperature: 0,
-            pressure: 0
+            temperature: 2,
+            pressure: 2
           },
           {
             id: 3,
             name: "№4 п-к",
-            temperature: 0,
-            pressure: 0
+            temperature: 2,
+            pressure: 2
           },
           {
             id: 4,
             name: "№5 п-к",
-            temperature: 0,
-            pressure: 0
+            temperature: 2,
+            pressure: 2
           },
           {
             id: 5,
             name: "№6 п-к",
-            temperature: 0,
-            pressure: 0
+            temperature: 2,
+            pressure: 2
           },
           {
             id: 6,
             name: "№7 п-к",
-            temperature: 0,
-            pressure: 0
+            temperature: 2,
+            pressure: 2
           },
           {
             id: 7,
             name: "№8 п-к",
-            temperature: 0,
-            pressure: 0
+            temperature: 2,
+            pressure: 2
           },
           {
             id: 8,
             name: "№9 п-к",
-            temperature: 0,
-            pressure: 0
+            temperature: 2,
+            pressure: 2
           },
           {
             id: 9,
             name: "Уровень масла",
-            temperature: 0,
-            pressure: 0
+            temperature: 2,
+            pressure: 2
           }
         ]
       },

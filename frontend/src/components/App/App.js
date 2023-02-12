@@ -1,9 +1,9 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Routes, Route } from 'react-router-dom'
 import { DataContext } from "../contexts/DataContext";
-import Exhauster from "../Exhauster/Exhauster";
 import Header from "../Header/Header";
 import Main from "../Main/Main";
+import ExhausterPage from "../ExhausterPage/ExhausterPage";
 import Trends from "../Trends/Trends";
 import { dataTest } from "../../utils/dataTest";
 
@@ -11,6 +11,12 @@ function App() {
 
   // Стэйт для данных с бекэнда (или для тестовых данных).
   const [currentDataTest, setCurrentDataTest] = useState(dataTest);
+  const [exhausterData, setExhausterData] = useState({});
+
+  // Отслеживаем изменение данных и обновляем стэйт.
+  useEffect(() => {
+    setCurrentDataTest(dataTest);
+  }, dataTest)
 
   return (
     // Прокидываем стэйт с данным по все компоненты.
@@ -23,8 +29,8 @@ function App() {
 
         {/* А отсюда начинается роутинг */}
         <Routes>
-          <Route path='/' element={<Main />} />
-          <Route path='/exhauster' element={<Exhauster />} />
+          <Route path='/' element={<Main setExhausterData={setExhausterData} />} />
+          <Route path='/exhauster' element={<ExhausterPage exhausterData={exhausterData} />} />
           <Route path='/trends' element={<Trends />} />
           <Route path='*' element={<Main />} />
         </Routes>
