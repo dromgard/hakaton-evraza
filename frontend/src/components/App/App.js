@@ -1,26 +1,37 @@
-import React from "react";
+import React, { useState } from "react";
+import { Routes, Route } from 'react-router-dom'
+import { DataContext } from "../contexts/DataContext";
 import Exhauster from "../Exhauster/Exhauster";
 import Header from "../Header/Header";
 import Main from "../Main/Main";
 import Trends from "../Trends/Trends";
-import { Routes, Route } from 'react-router-dom'
+import { dataTest } from "../../utils/dataTest";
 
 function App() {
+
+  // Стэйт для данных с бекэнда (или для тестовых данных).
+  const [currentDataTest, setCurrentDataTest] = useState(dataTest);
+
   return (
-    <div className="app">
+    // Прокидываем стэйт с данным по все компоненты.
+    <DataContext.Provider value={currentDataTest}>
 
-      {/* Этот компонент отображается на всех страничках */}
-      <Header />
+      <div className="app">
 
-      {/* А отсюда начинается роутинг */}
-      <Routes>
-        <Route path='/' element={<Main />} />
-        <Route path='/exhauster' element={<Exhauster />} />
-        <Route path='/trends' element={<Trends />} />
-        <Route path='*' element={<Main />} />
-      </Routes>
+        {/* Этот компонент отображается на всех страничках */}
+        <Header />
 
-    </div>
+        {/* А отсюда начинается роутинг */}
+        <Routes>
+          <Route path='/' element={<Main />} />
+          <Route path='/exhauster' element={<Exhauster />} />
+          <Route path='/trends' element={<Trends />} />
+          <Route path='*' element={<Main />} />
+        </Routes>
+
+      </div>
+
+    </DataContext.Provider>
   );
 }
 

@@ -2,8 +2,9 @@ import { Link } from 'react-router-dom'
 import { useState } from "react";
 import exhausterImage from '../../images/extruder.png'
 
-function Exhauster() {
+function Exhauster({ name, rotorNumber, rotorDate, rotorReplace, rotorPrognosys, sensors }) {
 
+  // Открываем и закрываем списки датчиков.
   const [isWarningOpen, setIsWarningOpen] = useState(true);
   const [isBearingsOpen, setIsBearingsOpen] = useState(true);
 
@@ -14,16 +15,16 @@ function Exhauster() {
           <svg height="24" width="24">
             <circle cx="12" cy="12" r="6" fill="red" />
           </svg>
-          <p className="exhauster__name">Экструдер У-171</p>
+          <p className="exhauster__name">Эксгаустер {name}</p>
         </div>
         <Link className="link exhauster__link" to="/exhauster" >&gt;</Link>
       </div>
 
       <div className="exhauster__body">
         <div className="exhauster__router-info">
-          <p><b>Ротер № 35к</b></p>
+          <p><b>Ротер №{rotorNumber}</b></p>
           <div className="exhauster__body-router-info-date">
-            <p>12.02.2022</p>
+            <p>{rotorDate}</p>
           </div>
           <a className="link" href='#'>Изменить</a>
         </div>
@@ -32,11 +33,11 @@ function Exhauster() {
         <div className="exhauster__roter-repl">
           <p className="exhauster__roter-repl-title"><b>Последняя замена ротера</b></p>
           <div className="exhauster__roter-repl-container">
-            <p className="exhauster__roter-repl-date"><b>6 сут</b></p>
+            <p className="exhauster__roter-repl-date"><b>{rotorReplace}</b></p>
             <div className="exhauster__roter-repl-date-container">
               <div>
                 <p className="exhauster__roter-repl-date-text">Прогноз</p>
-                <p className="exhauster__roter-repl-date-prognosys"><b>12 сут</b></p>
+                <p className="exhauster__roter-repl-date-prognosys"><b>{rotorPrognosys}</b></p>
               </div>
 
               <svg height="16" width="16">

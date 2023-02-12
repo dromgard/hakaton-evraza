@@ -1,7 +1,23 @@
-import React from "react";
+import React, { useContext } from "react";
 import Aglomachine from "../Aglomachine/Aglomachine";
+import { DataContext } from "../contexts/DataContext";
 
 function Main() {
+
+  // Получаем массив данных из контекста.
+  const currentDataTest = useContext(DataContext);
+  // console.log(currentDataTest);
+
+  // Создаем разметку для массива Агломашин.
+  const aglomachineMarkup = currentDataTest.map((item) => (
+    <li key={item.id}>
+      <Aglomachine
+        number={item.number}
+        exhausters={item.exhausters}
+      />
+    </li>
+  ))
+
   return (
     <main className="main">
       <div className="main__header">
@@ -28,9 +44,7 @@ function Main() {
         </li>
       </ul>
       <ul className="main__aglomachine-list">
-        <li><Aglomachine /></li>
-        <li><Aglomachine /></li>
-        <li><Aglomachine /></li>
+        {aglomachineMarkup}
       </ul>
 
     </main>
