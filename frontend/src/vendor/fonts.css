@@ -1,26 +1,36 @@
 @font-face {
   font-display: swap;
-  font-family: "Inter";
+  font-family: 'GT Eesti Pro Display';
   font-style: normal;
-  font-weight: 400;
-  src: url("../vendor/fonts/Inter-Regular.woff2") format("woff2"),
-    url("../vendor/fonts/Inter-Regular.woff") format("woff");
+  font-weight: 200;
+  src: url("../vendor/fonts/GTEestiProDisplay-UltraLight.woff2") format("woff2"),
+    url("../vendor/fonts/GTEestiProDisplay-UltraLight.woff") format("woff");
 }
 
 @font-face {
   font-display: swap;
-  font-family: "Inter";
+  font-family: 'GT Eesti Pro Display';
   font-style: normal;
   font-weight: 500;
-  src: url("../vendor/fonts/Inter-Medium.woff2") format("woff2"),
-    url("../vendor/fonts/Inter-Medium.woff") format("woff");
+  src: url("../vendor/fonts/GTEestiProDisplay-Medium.woff2") format("woff2"),
+    url("../vendor/fonts/GTEestiProDisplay-Medium.woff") format("woff");
 }
 
 @font-face {
   font-display: swap;
-  font-family: "Inter";
+  font-family: 'GT Eesti Pro Display';
   font-style: normal;
-  font-weight: 900;
-  src: url("../vendor/fonts/Inter-Black.woff2") format("woff2"),
-    url("../vendor/fonts/Inter-Black.woff") format("woff");
+  font-weight: 800;
+  src: url("../vendor/fonts/GTEestiProDisplay-UltraBold.woff2") format("woff2"),
+    url("../vendor/fonts/GTEestiProDisplay-UltraBold.woff") format("woff");
 }
+
+@font-face {
+  font-display: swap;
+  font-family: 'GT Eesti Pro Display';
+  font-style: normal;
+  font-weight: bold;
+  src: url("../vendor/fonts/GTEestiProDisplay-Bold.woff2") format("woff2"),
+    url("../vendor/fonts/GTEestiProDisplay-Bold.woff") format("woff");
+}
+

@@ -1,0 +1,882 @@
+.exhauster-story{
+    
+    position: relative;
+    height: 100%;
+
+    font-family: "GT Eesti Pro Display", Arial, sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    color: aliceblue;
+
+    background-color: rgb(255, 255, 255);
+
+
+    margin: 0 10px 0 10px;
+}
+
+.exhauster-story__sensor{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
+    margin-bottom: 20px;
+}
+
+.exhauster-story__sensor img{
+    width: 92%;
+    -webkit-user-select: none; 
+    -moz-user-select: none;
+    user-select: none; 
+    pointer-events: none;
+}
+
+h4{
+    margin:0;
+}
+
+p{
+    margin:0;
+}
+
+
+
+/* №9 */
+.exhauster-story__sensor-N9{
+    position: absolute;
+    left: 76px;
+    top: 444px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+
+    width: 120px;
+}
+.exhauster-story__sensor-N9-head{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid white;
+    height: 24px;
+}
+.exhauster-story__sensor-N9-body{
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+.exhauster-story__sensor-N9-body-date{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 10px 0 10px;
+    margin: 0;
+
+    height: 24px;
+}
+.exhauster-story__sensor-N9-box{
+    position: absolute;
+    left: 247px;
+    top: 460px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 24px;
+    height: 24px;
+
+    color: black;
+    border: 3px solid #000000;
+    background-color: rgb(255, 255, 255);
+    border-radius: 4px;
+}
+
+/* №8 */
+.exhauster-story__sensor-N8{
+    position: absolute;
+    left: 76px;
+    top: 546px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+
+    width: 120px;
+}
+.exhauster-story__sensor-N8-head{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid white;
+    height: 24px;
+}
+.exhauster-story__sensor-N8-body{
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+.exhauster-story__sensor-N8-body-date{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 10px 0 10px;
+    margin: 0;
+
+    height: 24px;
+}
+.exhauster-story__sensor-N8-box{
+    position: absolute;
+    left: 247px;
+    top: 494px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 24px;
+    height: 24px;
+
+    color: black;
+    border: 3px solid #000000;
+    background-color: rgb(255, 255, 255);
+    border-radius: 4px;
+}
+
+/* №7 */
+.exhauster-story__sensor-N7{
+    position: absolute;
+    left: 568px;
+    top: 646px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+
+    width: 120px;
+}
+.exhauster-story__sensor-N7-head{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid white;
+    height: 24px;
+}
+.exhauster-story__sensor-N7-body{
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+.exhauster-story__sensor-N7-body-date{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 10px 0 10px;
+    margin: 0;
+
+    height: 24px;
+}
+.exhauster-story__sensor-N7-box{
+    position: absolute;
+    left: 454px;
+    top: 494px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 24px;
+    height: 24px;
+
+    color: black;
+    border: 3px solid #000000;
+    background-color: rgb(255, 255, 255);
+    border-radius: 4px;
+}
+
+/* №6 */
+.exhauster-story__sensor-N6{
+    position: absolute;
+    left: 568px;
+    top: 560px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+
+    width: 120px;
+}
+.exhauster-story__sensor-N6-head{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid white;
+    height: 24px;
+}
+.exhauster-story__sensor-N6-body{
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+.exhauster-story__sensor-N6-body-date{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 10px 0 10px;
+    margin: 0;
+
+    height: 24px;
+}
+.exhauster-story__sensor-N6-box{
+    position: absolute;
+    left: 666px;
+    top: 472px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 24px;
+    height: 24px;
+
+    color: black;
+    border: 3px solid #000000;
+    background-color: rgb(255, 255, 255);
+    border-radius: 4px;
+}
+
+/* №5 */
+.exhauster-story__sensor-N5{
+    position: absolute;
+    left: 568px;
+    top: 260px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+
+    width: 120px;
+}
+.exhauster-story__sensor-N5-head{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid white;
+    height: 24px;
+}
+.exhauster-story__sensor-N5-body{
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+.exhauster-story__sensor-N5-body-date{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 10px 0 10px;
+    margin: 0;
+
+    height: 24px;
+}
+.exhauster-story__sensor-N5-box{
+    position: absolute;
+    left: 666px;
+    top: 388px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 24px;
+    height: 24px;
+
+    color: black;
+    border: 3px solid #000000;
+    background-color: rgb(255, 255, 255);
+    border-radius: 4px;
+}
+
+/* №4 */
+.exhauster-story__sensor-N4{
+    position: absolute;
+    left: 756px;
+    top: 260px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+
+    width: 120px;
+}
+.exhauster-story__sensor-N4-head{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid white;
+    height: 24px;
+}
+.exhauster-story__sensor-N4-body{
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+.exhauster-story__sensor-N4-body-date{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 10px 0 10px;
+    margin: 0;
+
+    height: 24px;
+}
+.exhauster-story__sensor-N4-box{
+    position: absolute;
+    left: 754px;
+    top: 388px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 24px;
+    height: 24px;
+
+    color: black;
+    border: 3px solid #000000;
+    background-color: rgb(255, 255, 255);
+    border-radius: 4px;
+}
+
+/* №3 */
+.exhauster-story__sensor-N3{
+    position: absolute;
+    left: 756px;
+    top: 560px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+
+    width: 120px;
+}
+.exhauster-story__sensor-N3-head{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid white;
+    height: 24px;
+}
+.exhauster-story__sensor-N3-body{
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+.exhauster-story__sensor-N3-body-date{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 10px 0 10px;
+    margin: 0;
+
+    height: 24px;
+}
+.exhauster-story__sensor-N3-box{
+    position: absolute;
+    left: 754px;
+    top: 472px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 24px;
+    height: 24px;
+
+    color: black;
+    border: 3px solid #000000;
+    background-color: rgb(255, 255, 255);
+    border-radius: 4px;
+}
+
+/* №2 */
+.exhauster-story__sensor-N2{
+    position: absolute;
+    left: 918px;
+    top: 560px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+
+    width: 120px;
+}
+.exhauster-story__sensor-N2-head{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid white;
+    height: 24px;
+}
+.exhauster-story__sensor-N2-body{
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+.exhauster-story__sensor-N2-body-date{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 10px 0 10px;
+    margin: 0;
+
+    height: 24px;
+}
+.exhauster-story__sensor-N2-box{
+    position: absolute;
+    left: 962px;
+    top: 370px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 24px;
+    height: 24px;
+
+    color: black;
+    border: 3px solid #000000;
+    background-color: rgb(255, 255, 255);
+    border-radius: 4px;
+}
+
+/* №1 */
+.exhauster-story__sensor-N1{
+    position: absolute;
+    left: 1280px;
+    top: 560px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+
+    width: 120px;
+}
+.exhauster-story__sensor-N1-head{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid white;
+    height: 24px;
+}
+.exhauster-story__sensor-N1-body{
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+.exhauster-story__sensor-N1-body-date{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 10px 0 10px;
+    margin: 0;
+
+    height: 24px;
+}
+.exhauster-story__sensor-N1-box{
+    position: absolute;
+    left: 1324px;
+    top: 370px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 24px;
+    height: 24px;
+
+    color: black;
+    border: 3px solid #000000;
+    background-color: rgb(255, 255, 255);
+    border-radius: 4px;
+}
+
+
+/* Датчики Охладителя */
+.exhauster-story__sensor-tem{
+    position: absolute;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+
+    width: 80px;
+    height: 40px;
+}
+.position_tem_1{
+    left: 1169px;
+    top: 210px;
+}
+.position_tem_2{
+    left: 1029px;
+    top: 126px;
+}
+.position_tem_3 {
+    left: 1214px;
+    top: 26px;
+}
+.position_tem_4 {
+    left: 1123px;
+    top: 26px;
+}
+
+.position_tem_5{
+    left: 396px;
+    top: 116px;
+}
+.position_tem_6{
+    left: 454px;
+    top: 730px;
+}
+.position_tem_7{
+    left: 396px;
+    top: 800px;
+}
+
+/* Главный привод */
+.exhauster-story__sensor-drive{
+    position: absolute;
+    left: 1036px;
+    top: 322px;
+
+    height: 160px;
+    width: 240px;
+
+    display: flex;
+    flex-direction: column;
+
+    justify-content: space-around;
+}
+.exhauster-story__sensor-drive-head{
+    text-align: center;
+    color: #000000;
+
+    height: 20px;
+    background-color: #ffffff;
+}
+.exhauster-story__sensor-drive-body{
+
+    font-size: 14px;
+
+    display: flex;
+    flex-direction: column;
+    gap:4px;
+}
+.exhauster-story__sensor-drive-body-date{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    color: #000000;
+    padding: 0 10px 0 10px;
+    margin: 0;
+
+    height: 24px;
+}
+.exhauster-story__sensor-drive-body-date span{
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    height: 24px;
+    width: 48px;
+    background-color: #474C50;
+    color: #ffffff;
+    border-radius: 4px;
+}
+
+
+/* Редуктор */
+.exhauster-story__sensor-reducer{
+    position: absolute;
+    left: 676px;
+    top: 432px;
+
+    height: 20px;
+    width: 100px;
+
+    display: flex;
+    flex-direction: column;
+
+    justify-content: space-around;
+}
+.exhauster-story__sensor-reducer h4{
+    text-align: center;
+    color: #000000;
+
+    height: 20px;
+    background-color: #ffffff;
+}
+
+/* Охладитель */
+.exhauster-story__sensor-cooler{
+    position: absolute;
+    left: 1134px;
+    top: 110px;
+
+    height: 20px;
+    width: 140px;
+
+    display: flex;
+    flex-direction: column;
+
+    justify-content: space-around;
+}
+.exhauster-story__sensor-cooler h4{
+    text-align: center;
+    color: #000000;
+
+    height: 20px;
+    background-color: #ffffff;
+}
+
+/* Маслобак */
+.exhauster-story__sensor-oil{
+    position: absolute;
+    left: 786px;
+    top: 68px;
+
+    height: 20px;
+    width: 215px;
+
+    display: flex;
+    flex-direction: column;
+
+    justify-content: space-around;
+}
+.exhauster-story__sensor-oil h4{
+    text-align: center;
+    color: #000000;
+
+    height: 20px;
+    background-color: #ffffff;
+}
+
+
+/* Температура газа */
+.exhauster-story__sensor-gas{
+    position: absolute;
+
+    color: #000000;
+
+    left: 280px;
+    top: 270px;
+
+    height: 20px;
+    width: 182px;
+    
+    display: flex;
+    flex-direction: column;
+
+    justify-content: space-around;
+}
+.exhauster-story__sensor-gas-body{
+    font-size: 14px;
+    font-variant: small-caps;
+
+    display: flex;
+    flex-direction: column;
+    gap:4px;
+}
+.exhauster-story__sensor-gas-body-date{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    color: #000000;
+    padding: 0 10px 0 10px;
+    margin: 0;
+
+    height: 24px;
+}
+.exhauster-story__sensor-gas-body-date span{
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    height: 24px;
+    width: 40px;
+    background-color: #474C50;
+    color: #ffffff;
+    border-radius: 2px;
+}
+
+/* Полоска Температура газа*/
+.exhauster-story__sensor-graph-gas{
+    position: absolute;
+    left: 286px;
+    top: 201px;
+
+    color:#000000;
+
+    font-size: 14px;
+    font-variant: small-caps;
+
+    /* Регулировка размера  max: 0-160 */
+    width: 160px;
+    height: 38px;
+
+    display: flex;
+    flex-direction: column-reverse;
+
+    background-color: #B8B9BE;
+}
+.exhauster-story__sensor-graph-gas span{
+    width: 160px;
+    padding-left: 10px;
+}
+
+.exhauster-story__sensor-graph-gas p{
+    width: 160px;
+    padding-left: 10px;
+}
+
+/* Полоска Уровня масла*/
+.exhauster-story__sensor-graph-oil{
+    position: absolute;
+    left: 786px;
+    top: 127px;
+
+    font-family: "GT Eesti Pro Display", Arial, sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    color:#000000;
+    
+    font-variant: small-caps;
+
+    /* Регулировка размера  max: 0-216 */
+    width: 60px;
+    height: 32px;
+
+    display: flex;
+    flex-direction: column-reverse;
+
+    background-color: #B8B9BE;
+}
+.exhauster-story__sensor-graph-oil span{
+    width: 206px;
+    padding-left: 10px;
+}
+.exhauster-story__sensor-graph-oil p{
+    font-size: 12px;
+    width: 206px;
+    padding-left: 10px;
+}
+
+/* Полоска Давления масла */
+.exhauster-story__sensor-graph-pressure{
+    position: absolute;
+    left: 1294px;
+    top: 261px;
+
+    font-family: "GT Eesti Pro Display", Arial, sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    color:#000000;
+    
+    font-variant: small-caps;
+
+    /* Регулировка размера  max: 0-214 */
+    width: 214px;
+    height: 30px;
+
+    display: flex;
+    flex-direction: column-reverse;
+
+    background-color: #B8B9BE;
+}
+.exhauster-story__sensor-graph-pressure span{
+    width: 206px;
+    padding-left: 10px;
+}
+.exhauster-story__sensor-graph-pressure p{
+    font-size: 12px;
+    width: 206px;
+    padding-left: 10px;
+}
+
+/* остальной текст и процент */
+.exhauster-story__sensor-name{
+    position: absolute;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+
+    color: #B8B9BE;
+}
+
+
+
+
+/* Цвета */
+
+/* Коробочки box */
+.box-color_normal{
+    border: 3px solid #000000;
+}
+.box-color_warning{
+    border: 3px solid #D5AC52;
+}
+.box-color_critical{
+    border: 3px solid #EF5733;
+}
+
+/* Датчики {1-9} */
+.sensor-color_normal{
+    /* Можно удалить */
+    border-radius: 4px;
+    background-color: #ffffff00;
+}
+.sensor-color_warning{
+    border-radius: 4px;
+    background-color: #D5AC52;
+}
+.sensor-color_critical{
+    border-radius: 4px;
+    background-color: #EF5733;
+}
+
+/* Графики */
+.graph-color_normal{
+    background-color: #B8B9BE;
+}
+.graph-color_warning{
+    background-color: #D5AC52;
+}
+.graph-color_critical{
+    background-color: #EF5733;
+}
