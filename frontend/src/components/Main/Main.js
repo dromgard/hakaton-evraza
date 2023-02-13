@@ -2,7 +2,7 @@ import React, { useContext } from "react";
 import Aglomachine from "../Aglomachine/Aglomachine";
 import { DataContext } from "../contexts/DataContext";
 
-function Main({ setExhausterData, updateDataDelay }) {
+function Main({ updateDataDelay }) {
 
   // Получаем массив данных из контекста.
   const currentDataTest = useContext(DataContext);
@@ -13,7 +13,6 @@ function Main({ setExhausterData, updateDataDelay }) {
       <Aglomachine
         number={item.number}
         exhausters={item.exhausters}
-        setExhausterData={setExhausterData}
       />
     </li>
   ))

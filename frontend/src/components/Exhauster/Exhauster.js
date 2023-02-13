@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom'
 import { useState } from "react";
 import exhausterImage from '../../images/extruder.png'
 
-function Exhauster({ data, setExhausterData }) {
+function Exhauster({ data }) {
 
   const { name, rotorNumber, rotorDate, rotorReplace, rotorPrognosys, sensors } = data;
 

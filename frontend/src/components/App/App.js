@@ -11,7 +11,6 @@ function App() {
 
   // Стэйт для данных с бекэнда (или для тестовых данных).
   const [currentDataTest, setCurrentDataTest] = useState(dataTest);
-  const [exhausterData, setExhausterData] = useState({});
   const [updateDataDelay, setUpdateDataDelay] = useState("5 cек.");
 
   // Отслеживаем изменение данных и обновляем стэйт.
@@ -30,8 +29,8 @@ function App() {
 
         {/* А отсюда начинается роутинг */}
         <Routes>
-          <Route path='/' element={<Main setExhausterData={setExhausterData} updateDataDelay={updateDataDelay} />} />
-          <Route path='/exhauster' element={<ExhausterPage exhausterData={exhausterData} updateDataDelay={updateDataDelay} />} />
+          <Route path='/' element={<Main updateDataDelay={updateDataDelay} />} />
+          <Route path='/exhauster' element={<ExhausterPage updateDataDelay={updateDataDelay} />} />
           <Route path='/trends' element={<Trends />} />
           <Route path='*' element={<Main />} />
         </Routes>

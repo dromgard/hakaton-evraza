@@ -1,14 +1,13 @@
 import React from "react";
 import Exhauster from "../Exhauster/Exhauster";
 
-function Aglomachine({ number, exhausters, setExhausterData }) {
+function Aglomachine({ number, exhausters }) {
 
   // Создаем разметку для массива Агломашин.
   const exhausterMarkup = exhausters.map((item) => (
     <li key={item.id}>
       <Exhauster
         data={item}
-        setExhausterData={setExhausterData}
       />
     </li>
   ))
