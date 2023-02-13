@@ -63,7 +63,7 @@ function Exhauster({ data, setExhausterData }) {
           </svg>
           <p className="exhauster__name">Эксгаустер {name}</p>
         </div>
-        <Link className="link exhauster__link" to="/exhauster" onClick={() => setExhausterData(data)}>&gt;</Link>
+        <Link className="link exhauster__link" to="/exhauster" onClick={() => localStorage.setItem("exhausterId", data.id)}>&gt;</Link>
       </div>
 
       <div className="exhauster__body">

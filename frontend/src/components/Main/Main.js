@@ -2,7 +2,7 @@ import React, { useContext } from "react";
 import Aglomachine from "../Aglomachine/Aglomachine";
 import { DataContext } from "../contexts/DataContext";
 
-function Main({ setExhausterData }) {
+function Main({ setExhausterData, updateDataDelay }) {
 
   // Получаем массив данных из контекста.
   const currentDataTest = useContext(DataContext);
@@ -21,8 +21,11 @@ function Main({ setExhausterData }) {
   return (
     <main className="main">
       <div className="main__header">
-        <div className="main__header-logo"></div>
-        <h1 className="section-title">Главный экран</h1>
+        <div className="main__header-info">
+          <div className="main__header-logo"></div>
+          <h1 className="section-title">Главный экран</h1>
+        </div>
+        <p className="section-title">Задержка получения данных: {updateDataDelay}</p>
       </div>
       <ul className="main__info">
         <li className="main__info-item">

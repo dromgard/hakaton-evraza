@@ -10,8 +10,16 @@
   flex-direction: row;
   gap: 14px;
   align-items: center;
+  justify-content: space-between;
   background-color: #fafafa;
   border-bottom: 2px solid #f4f4f4;
+}
+
+.main__header-info {
+  display: flex;
+  flex-direction: row;
+  gap: 14px;
+  align-items: center;
 }
 
 .main__header-logo {
