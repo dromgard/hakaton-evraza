@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Routes, Route } from 'react-router-dom'
+import { Routes, Route, Navigate } from 'react-router-dom'
 import { DataContext } from "../contexts/DataContext";
 import Header from "../Header/Header";
 import Main from "../Main/Main";
@@ -32,7 +32,7 @@ function App() {
           <Route path='/' element={<Main updateDataDelay={updateDataDelay} />} />
           <Route path='/exhauster' element={<ExhausterPage updateDataDelay={updateDataDelay} />} />
           <Route path='/trends' element={<Trends updateDataDelay={updateDataDelay} />} />
-          <Route path='*' element={<Main />} />
+          <Route path='*' element={<Navigate to="/" />} />
         </Routes>
 
       </div>
