@@ -14,8 +14,8 @@ export const dataTest = [
           {
             id: 0,
             name: "№1 п-к",
-            temperature: 0,
-            pressure: 0
+            temperature: 1,
+            pressure: 1
           },
           {
             id: 1,
@@ -62,8 +62,8 @@ export const dataTest = [
           {
             id: 8,
             name: "№9 п-к",
-            temperature: 0,
-            pressure: 0
+            temperature: 1,
+            pressure: 2
           },
           {
             id: 9,
