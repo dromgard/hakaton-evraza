@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import Exhauster from '../../images/Exhauster.svg'
 import { DataContext } from "../contexts/DataContext";
 
@@ -9,6 +9,70 @@ function ExhausterPage({ updateDataDelay }) {
 
   // Получаем нужный эксгаустер.
   const exhausterData = currentDataTest.map((item) => item.exhausters).flat().filter((item) => item.id === currentExhausterId)[0];
+
+  // Работа с данными
+
+  ////// Для Всех цифровых датчиков //////
+  // == 0 - красный | == 1 - желтый | == 2 - серый
+  function colorSensorBox(data){
+    if (data === 0) { return 'box-color_critical' }
+    return data === 2 ? 'box-color_normal' : 'box-color_warning'
+  }
+
+  /// BOX Для Всех цифровых датчиков
+  // == 0 - красный | == 1 - желтый | == 2 - серый
+  function colorSensor(data){
+    if (data === 0) { return 'sensor-color_critical' }
+    return data === 2 ? 'sensor-color_normal' : 'sensor-color_warning'
+  }
+
+
+
+
+  ////// Графики и их переменные  //////
+  const [gasTemp,getGasTemp] = useState(45)         //   (0-130) до 130 градусов
+  const [oilLevl,getOilLevl] = useState(34)        //    (0-100) до 100 %
+  const [oilPressure,getOilPressure] = useState(4)  //    (0-6)   до 6 кг/см
+
+  // Если объём бака будет 500, то нужно:
+  // getOilLevl( data/500 * 100) и записать в oilLevl
+  // Поменять factorOilLevl на 500/100 = 5
+
+  // limit - max_width
+  let maxGasTemp = 160 
+  let maxOilLevl = 216
+  let maxOilPressure = 214
+
+  // factor
+  let factorGasTemp = 1.25
+  let factorOilLevl = 2.16
+  let factorOilPressure = 35.6
+
+  // Лимит, чтобы график не увеличивался до бесконечности
+  function setGasTemp(data, factor, limit){
+    return data * factor >= limit ? limit : data * factor
+  }
+
+  /// Для gasTemp
+  // от 0-50 - серый | от 50-70 - желтый | от 70 - красный
+  function colorGraph_GasTemp(data){
+    if (data < 50) { return 'graph-color_normal'}
+    return data < 70 ? 'graph-color_warning' : 'graph-color_critical'
+  }
+
+  /// Для OilLevl
+  // от 0-20 - красный | от 20-50 - желтый | от 50- серый
+  function colorGraph_OilLevl(data){
+    if (data < 20) { return 'graph-color_critical'}
+    return data < 50 ? 'graph-color_warning' : 'graph-color_normal'
+  }
+
+  /// Для OilPressure
+  // от 0-1 - серый | от 50-70 - желтый | от 70 - красный
+  function colorGraph_OilPressure(data){
+    if (data < 2) { return 'graph-color_normal'}
+    return data < 4 ? 'graph-color_warning' : 'graph-color_critical'
+  }
 
   return (
     <div>
@@ -42,13 +106,13 @@ function ExhausterPage({ updateDataDelay }) {
           <div className="exhauster-story__sensor-N9">
             <div className="exhauster-story__sensor-N9-head">9 ПС</div>
             <div className="exhauster-story__sensor-N9-body">
-              <div className="exhauster-story__sensor-N9-body-date sensor-color_warning">
+              <div className={`exhauster-story__sensor-N9-body-date ${colorSensor(exhausterData.sensors[8].temperature)}`}>
                 <p>T,°C</p>
-                <p>200</p>
+                <p>{exhausterData.sensors[8].temperature}</p>
               </div>
             </div>
           </div>
-          <div className="exhauster-story__sensor-N9-box">9</div>
+          <div className={`exhauster-story__sensor-N9-box ${colorSensorBox(exhausterData.sensors[8].temperature)}`}>9</div>
 
           {/* 8 */}
           <div className="exhauster-story__sensor-N8">
@@ -248,21 +312,24 @@ function ExhausterPage({ updateDataDelay }) {
 
           {/* Графики */}
           {/* График Температуры газа */}
-          <div className="exhauster-story__sensor-graph-gas">
+          <div style={{ width: `${setGasTemp(gasTemp, factorGasTemp, maxGasTemp)}px` }} 
+              className={`exhauster-story__sensor-graph-gas ${colorGraph_GasTemp(gasTemp)}`}>
             <p>температура газа, °C</p>
-            <span>45</span>
+            <span>{gasTemp}</span>
           </div>
 
           {/* График Уровня масла */}
-          <div className="exhauster-story__sensor-graph-oil graph-color_warning">
+          <div style={{ width: `${setGasTemp(oilLevl, factorOilLevl, maxOilLevl)}px` }} 
+              className={`exhauster-story__sensor-graph-oil ${colorGraph_OilLevl(oilLevl)}`}>
             <p>уровень масла, %C</p>
-            <span>34,3</span>
+            <span>{oilLevl}</span>
           </div>
 
           {/* График Уровня масла */}
-          <div className="exhauster-story__sensor-graph-pressure graph-color_critical">
+          <div style={{width: `${setGasTemp(oilPressure, factorOilPressure, maxOilPressure)}px`}} 
+              className={`exhauster-story__sensor-graph-pressure ${colorGraph_OilPressure(oilPressure)}`}>
             <p>давление масла, кг/cм²</p>
-            <span>2,5</span>
+            <span>{oilPressure}</span>
           </div>
 
 
