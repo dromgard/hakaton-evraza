@@ -1,0 +1,162 @@
+.thrends {
+  margin: 10px 10px 0;
+  background-color: #fff;
+}
+
+.thrends__container {
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  align-items: start;
+  gap: 20px;
+}
+
+.thrends__checkbox-header {
+  margin: 0;
+  padding: 15px 10px 10px;
+  display: flex;
+  gap: 10px;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #e1e1e1;
+}
+
+.thrends__list-button {
+  margin: 0;
+  padding: 0;
+  min-width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+  font-family: "GT Eesti Pro Display", Arial, sans-serif;
+  font-style: normal;
+  font-weight: 200;
+  font-size: 13px;
+  line-height: 1.3;
+  color: #4a4a4a;
+  border: 1px solid #bdbdbd;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+.thrends__checkbox-text {
+  margin: 0;
+  padding: 0;
+  font-family: "GT Eesti Pro Display", Arial, sans-serif;
+  font-style: normal;
+  font-weight: 200;
+  font-size: 13px;
+  line-height: 1.3;
+  color: #4a4a4a;
+}
+
+.thrends__checkbox-text_max-width {
+  width: fill-available;
+}
+
+.thrends__chart-header {
+  margin: 0;
+  padding: 15px 10px 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  gap: 10px;
+  border-bottom: 1px solid #e1e1e1;
+}
+
+.thrends__time-button {
+  margin: 0;
+  padding: 0;
+  min-width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+  font-family: "GT Eesti Pro Display", Arial, sans-serif;
+  font-style: normal;
+  font-weight: 200;
+  font-size: 16px;
+  line-height: 1.3;
+  color: #4a4a4a;
+  border: 1px solid #bdbdbd;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+.thrends__time-button_select {
+  margin: 0 15px 0 0;
+  padding: 3px;
+  font-size: 13px;
+}
+
+.sensor-title-container {
+  margin: 2px 0px 2px 10px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 5px;
+  width: fill-available;
+}
+
+.sensor-title {
+  margin: 0;
+  padding: 5px;
+  width: fill-available;
+  background: #f9f9f9;
+  font-family: "GT Eesti Pro Display", Arial, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 1.3;
+  color: #000000;
+  border: 1px solid #d9d6d6;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+.sensor-list {
+  margin: 0px 0px 0px 25px;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  list-style: none;
+  width: fill-available;
+}
+
+.sensor-item {
+  display: flex;
+  flex-direction: column;
+  width: fill-available;
+}
+
+.sensor-sub-item {
+  margin: 2px 0px 2px 10px;
+  padding: 5px 15px 5px 5px;
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+  background: #f9f9f9;
+  border: 1px solid #d9d6d6;
+  border-radius: 5px;
+  box-sizing: border-box;
+  width: fill-available;
+}
+
+.sensor-sub-item__title {
+  margin: 0;
+  padding: 0;
+  font-family: "GT Eesti Pro Display", Arial, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 1.3;
+  color: #000000;
+}
+
+.sensor-sub-item__title_max-width {
+  width: fill-available;
+}
