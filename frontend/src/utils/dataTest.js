@@ -20,38 +20,38 @@ export const dataTest = [
           {
             id: 1,
             name: "№2 п-к",
-            temperature: 1,
+            temperature: 0,
             pressure: 0
           },
           {
             id: 2,
             name: "№3 п-к",
-            temperature: 1,
+            temperature: 0,
             pressure: 0
           },
           {
             id: 3,
             name: "№4 п-к",
             temperature: 0,
-            pressure: 1
+            pressure: 0
           },
           {
             id: 4,
             name: "№5 п-к",
             temperature: 0,
-            pressure: 1
+            pressure: 0
           },
           {
             id: 5,
             name: "№6 п-к",
-            temperature: 1,
-            pressure: 2
+            temperature: 0,
+            pressure: 0
           },
           {
             id: 6,
             name: "№7 п-к",
-            temperature: 1,
-            pressure: 2
+            temperature: 0,
+            pressure: 0
           },
           {
             id: 7,
@@ -68,8 +68,8 @@ export const dataTest = [
           {
             id: 9,
             name: "Уровень масла",
-            temperature: 2,
-            pressure: 2
+            temperature: 0,
+            pressure: 0
           }
         ]
       },

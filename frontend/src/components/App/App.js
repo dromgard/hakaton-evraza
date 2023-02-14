@@ -31,7 +31,7 @@ function App() {
         <Routes>
           <Route path='/' element={<Main updateDataDelay={updateDataDelay} />} />
           <Route path='/exhauster' element={<ExhausterPage updateDataDelay={updateDataDelay} />} />
-          <Route path='/trends' element={<Trends />} />
+          <Route path='/trends' element={<Trends updateDataDelay={updateDataDelay} />} />
           <Route path='*' element={<Main />} />
         </Routes>
 
