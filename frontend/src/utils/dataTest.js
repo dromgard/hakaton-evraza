@@ -15,61 +15,97 @@ export const dataTest = [
             id: 0,
             name: "№1 п-к",
             temperature: 0,
-            pressure: 1
+            pressure: 1,
+            temperatureValue: [40, 50, 60, 70, 80],
+            pressureValue: [10, 20, 30, 40, 50]
           },
           {
             id: 1,
             name: "№2 п-к",
             temperature: 1,
-            pressure: 0
+            pressure: 0,
+            temperatureValue: [10, 20, 30, 40, 50],
+            pressureValue: [20, 35, 20, 59, 60]
           },
           {
             id: 2,
             name: "№3 п-к",
             temperature: 1,
-            pressure: 0
+            pressure: 0,
+            temperatureValue: [20, 35, 20, 59, 60],
+            pressureValue: [75, 65, 55, 65, 95]
           },
           {
             id: 3,
             name: "№4 п-к",
             temperature: 0,
-            pressure: 1
+            pressure: 1,
+            temperatureValue: [75, 65, 55, 65, 95],
+            pressureValue: [90, 10, 50, 60, 70]
           },
           {
             id: 4,
             name: "№5 п-к",
             temperature: 0,
-            pressure: 1
+            pressure: 1,
+            temperatureValue: [90, 10, 50, 60, 70],
+            pressureValue: [50, 20, 40, 20, 10]
           },
           {
             id: 5,
             name: "№6 п-к",
             temperature: 1,
-            pressure: 2
+            pressure: 2,
+            temperatureValue: [50, 20, 40, 20, 10],
+            pressureValue: [55, 36, 77, 28, 99]
           },
           {
             id: 6,
             name: "№7 п-к",
             temperature: 1,
-            pressure: 2
+            pressure: 2,
+            temperatureValue: [55, 36, 77, 28, 99],
+            pressureValue: [48, 59, 62, 71, 80]
           },
           {
             id: 7,
             name: "№8 п-к",
             temperature: 0,
-            pressure: 0
+            pressure: 0,
+            temperatureValue: [48, 59, 62, 71, 80],
+            pressureValue: [25, 55, 15, 55, 95]
           },
           {
             id: 8,
             name: "№9 п-к",
             temperature: 2,
-            pressure: 2
+            pressure: 2,
+            temperatureValue: [25, 55, 15, 55, 95],
+            pressureValue: [50, 20, 40, 20, 10]
           },
           {
             id: 9,
             name: "Уровень масла",
             temperature: 2,
-            pressure: 2
+            pressure: 2,
+            temperatureValue: [85, 25, 55, 55, 35],
+            pressureValue: [25, 55, 15, 55, 95]
+          },
+          {
+            id: 10,
+            name: "Главный привод",
+            temperature: 2,
+            pressure: 2,
+            temperatureValue: [15, 35, 75, 25, 95],
+            pressureValue: [27, 52, 35, 5, 25]
+          },
+          {
+            id: 11,
+            name: "Охладитель",
+            temperature: 2,
+            pressure: 2,
+            temperatureValue: [20, 5, 10, 3, 1],
+            pressureValue: [15, 85, 34, 4, 90]
           }
         ]
       },
