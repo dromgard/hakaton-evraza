@@ -29,9 +29,10 @@ function Trends({ updateDataDelay }) {
     mainDrive: false
   });
 
+  // Стэйт хранения массива данных для отрисовывания на графике. Он же datasets в его настройках.
   const [chartItems, setChartItems] = useState([]);
 
-  // Стэйт хранения данных для графика.
+  // Стэйт хранения ВСЕХ данных для графика.
   const [chartData, setchartData] = useState({
     labels: [2015, 2016, 2017, 2018, 2020],
     datasets: [],

@@ -6,8 +6,21 @@ import Main from "../Main/Main";
 import ExhausterPage from "../ExhausterPage/ExhausterPage";
 import Trends from "../Trends/Trends";
 import { dataTest } from "../../utils/dataTest";
+import { dataTestKafka } from "../../utils/dataTest";
 
 function App() {
+
+  // Получаем из массива данных самые последние данные. И записываем в стэйт.
+  function getLastData(data) {
+    // Находим самую последнюю дату.
+    const lastDate = data.map((item) => Date.parse(item.Timestamp)).sort((a, b) => b - a)[0];
+
+    // Возвращаем саммые последние данные.
+    return data.filter((item) => Date.parse(item.Timestamp) === lastDate)[0];
+  }
+
+  getLastData(dataTestKafka);
+
 
   // Стэйт для данных с бекэнда (или для тестовых данных).
   const [currentDataTest, setCurrentDataTest] = useState(dataTest);
