@@ -26,7 +26,7 @@
   width: 28px;
   height: 28px;
   border-radius: 5px;
-  background: #fab72d;
+  background: #fab72d no-repeat center url("../../images/page.svg");
 }
 
 .main__info {
@@ -42,7 +42,8 @@
 .main__info-item {
   display: flex;
   flex-direction: row;
-  gap: 10px;
+  gap: 3px;
+  align-items: center;
 }
 
 .main__aglomachine-list {
