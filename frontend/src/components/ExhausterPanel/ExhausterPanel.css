@@ -1,0 +1,45 @@
+.exhauster-panel {
+  margin: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.exhauster-panel__navigate {
+  margin: 0;
+  padding: 6px;
+  display: flex;
+  flex-direction: row;
+  background: #ffffff;
+  border-radius: 4px;
+}
+
+.exhauster-panel__text {
+  margin: 0;
+  padding: 5px 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fab82e;
+  border-radius: 4px;
+  font-family: "GT Eesti Pro Display", Arial, sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 14px;
+  color: #000000;
+}
+
+.exhauster-panel__link {
+  margin: 0;
+  padding: 5px 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "GT Eesti Pro Display", Arial, sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 14px;
+  color: #f9a823;
+}
