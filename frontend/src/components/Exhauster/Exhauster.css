@@ -259,20 +259,61 @@
 .exhauster__sensor {
   margin: 0;
   padding: 4px;
+  width: 23px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
   border: 1px solid #d1d1d1;
   border-radius: 4px;
+  background-repeat: no-repeat;
+  background-position: 12px center;
 }
 
-.exhauster__sensor_warning {
+.exhauster__sensor_temp {
+  background-image: url("../../images/temperature.svg");
+}
+
+.exhauster__sensor_temp-warning {
+  background-image: url("../../images/temperature-warning.svg");
   background-color: #ffe69b;
   border: 1px solid #d1ac13;
 }
 
-.exhauster__sensor_critical {
+.exhauster__sensor_temp-critical {
+  background-image: url("../../images/temperature-critical.svg");
+  background-color: #ffa0a0;
+  border: 1px solid #b31111;
+}
+
+.exhauster__sensor_vibration {
+  background-image: url("../../images/vibration.svg");
+}
+
+.exhauster__sensor_vibration-warning {
+  background-image: url("../../images/vibration-warning.svg");
+  background-color: #ffe69b;
+  border: 1px solid #d1ac13;
+}
+
+.exhauster__sensor_vibration-critical {
+  background-image: url("../../images/vibration-critical.svg");
+  background-color: #ffa0a0;
+  border: 1px solid #b31111;
+}
+
+.exhauster__sensor_oil {
+  background-image: url("../../images/oil.svg");
+}
+
+.exhauster__sensor_oil-warning {
+  background-image: url("../../images/oil-warning.svg");
+  background-color: #ffe69b;
+  border: 1px solid #d1ac13;
+}
+
+.exhauster__sensor_oil-critical {
+  background-image: url("../../images/oil-critical.svg");
   background-color: #ffa0a0;
   border: 1px solid #b31111;
 }

@@ -10,26 +10,25 @@ import { dataTestKafka } from "../../utils/dataTest";
 
 function App() {
 
+  // Стэйт для данных с бекэнда (или для тестовых данных).
+  const [currentDataTest, setCurrentDataTest] = useState({});
+  const [updateDataDelay, setUpdateDataDelay] = useState("5 cек.");
+
   // Получаем из массива данных самые последние данные. И записываем в стэйт.
   function getLastData(data) {
     // Находим самую последнюю дату.
     const lastDate = data.map((item) => Date.parse(item.Timestamp)).sort((a, b) => b - a)[0];
 
     // Возвращаем саммые последние данные.
-    return data.filter((item) => Date.parse(item.Timestamp) === lastDate)[0];
+    const newData = data.filter((item) => Date.parse(item.Timestamp) === lastDate)[0];
+
+    setCurrentDataTest(newData)
   }
-
-  getLastData(dataTestKafka);
-
-
-  // Стэйт для данных с бекэнда (или для тестовых данных).
-  const [currentDataTest, setCurrentDataTest] = useState(dataTest);
-  const [updateDataDelay, setUpdateDataDelay] = useState("5 cек.");
 
   // Отслеживаем изменение данных и обновляем стэйт.
   useEffect(() => {
-    setCurrentDataTest(dataTest);
-  }, dataTest)
+    getLastData(dataTestKafka);
+  }, [])
 
   return (
     // Прокидываем стэйт с данным по все компоненты.
