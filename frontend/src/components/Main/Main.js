@@ -53,7 +53,7 @@ function Main({ updateDataDelay }) {
 
     const daysDiff = Math.ceil(timeDiff / (1000 * 3600 * 24))
 
-    return daysDiff
+    return `${daysDiff} сут`
   }
 
   // Обработчик сворачивания списков.
