@@ -67,6 +67,7 @@ function App() {
       .catch((err) => {
         console.log("err", err);
         getLastData(dataTestKafka);
+        setfullData(dataTestKafka);
       });
   }
 
