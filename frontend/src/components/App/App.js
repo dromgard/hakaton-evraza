@@ -61,8 +61,8 @@ function App() {
       .then((userData) => {
         getLastData(userData);
         setfullData(userData);
-        console.log("userData", userData);
-        // console.log("Получили новые данные");
+        // console.log("userData", userData);
+        console.log("Получили новые данные", new Date());
       })
       .catch((err) => {
         console.log("err", err);
@@ -71,15 +71,20 @@ function App() {
       });
   }
 
-  // Отслеживаем изменение данных и обновляем стэйт.
+  // Обновляем данные каждые 30 секунд.
   useEffect(() => {
-    // getLastData(dataTestKafka);
-    getData()
+    const interval = setInterval(() => {
+      getData();
+    }, 30000);
+    return () => clearInterval(interval);
+  }, []);
+
+
+  // Стартовая загрузка данных.
+  useEffect(() => {
+    getData();
 
   }, [])
-
-
-
 
   return (
     // Прокидываем стэйт с данным по все компоненты.
