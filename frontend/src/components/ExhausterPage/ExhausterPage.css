@@ -524,6 +524,9 @@ p {
 
   width: 80px;
   height: 40px;
+
+  background-color: #474c50;
+  border-radius: 4px;
 }
 .position_tem_1 {
   left: 1169px;
@@ -535,11 +538,11 @@ p {
 }
 .position_tem_3 {
   left: 1214px;
-  top: 26px;
+  top: 22px;
 }
 .position_tem_4 {
   left: 1123px;
-  top: 26px;
+  top: 22px;
 }
 
 .position_tem_5 {
@@ -594,7 +597,8 @@ p {
 
   height: 24px;
 }
-.exhauster-story__sensor-drive-body-date span {
+
+.exhauster-story__sensor-drive-body-date div {
   display: flex;
 
   justify-content: center;
@@ -711,7 +715,6 @@ p {
 }
 .exhauster-story__sensor-gas-body-date span {
   display: flex;
-
   justify-content: center;
   align-items: center;
 
@@ -720,6 +723,34 @@ p {
   background-color: #474c50;
   color: #ffffff;
   border-radius: 2px;
+}
+
+.exhauster-story__sensor-gate-valve{
+  position: absolute;
+
+  left: 420px;
+  top: 726px;
+}
+
+.exhauster-story__sensor-gate-valve-line{
+  display: flex;
+  justify-content: right;
+
+  width: 105px;
+  height: 10px;
+
+  position: absolute;
+
+  left: 324px;
+  top: 735px;
+}
+
+.exhauster-story__sensor-gate-valve-line-start{
+  width: 105px;
+  height: 10px;
+  background-color: #4A8F40;
+
+
 }
 
 /* Полоска Температура газа*/
@@ -866,5 +897,13 @@ p {
   background-color: #d5ac52;
 }
 .graph-color_critical {
+  background-color: #ef5733;
+}
+
+/* Плитки */
+.tile-color_warning {
+  background-color: #d5ac52;
+}
+.tile-color_critical {
   background-color: #ef5733;
 }

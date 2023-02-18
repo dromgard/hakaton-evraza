@@ -103,8 +103,6 @@
 <rect x="253" y="506" width="65" height="11" fill="#687273"/>
 <rect x="253" y="522" width="65" height="11" fill="#687273"/>
 <rect x="247" y="697" width="81" height="14" fill="#D9D9D9"/>
-<path d="M364 687L358.296 696V712.5L364 720H350L355.185 712.5V696L350 687H364Z" fill="#4D8744"/>
-<rect x="286" y="699" width="72" height="10" fill="#4D8744"/>
 <path d="M287 145L295.66 130L278.34 130L287 145ZM285.5 103L285.5 131.5L288.5 131.5L288.5 103L285.5 103Z" fill="#6E6F71"/>
 <path d="M291 788L299.66 773L282.34 773L291 788ZM289.5 746L289.5 774.5L292.5 774.5L292.5 746L289.5 746Z" fill="#6F7376"/>
 <rect x="920.5" y="302.5" width="237" height="157" rx="8.5" fill="#EBE9EC" stroke="#B9B7BA" stroke-width="3"/>
@@ -167,10 +165,6 @@
 <rect x="646" y="238" width="140" height="66" rx="8" fill="#414C4E"/>
 <rect x="646" y="524" width="140" height="66" rx="8" fill="#414C4E"/>
 <rect x="466" y="524" width="140" height="66" rx="8" fill="#414C4E"/>
-<rect x="1049" y="200" width="80" height="37" rx="8" fill="#414C4E"/>
-<rect x="916" y="119" width="80" height="37" rx="8" fill="#414C4E"/>
-<rect x="1005" y="25" width="80" height="37" rx="8" fill="#414C4E"/>
-<rect x="1092" y="25" width="80" height="37" rx="8" fill="#414C4E"/>
 <defs>
 <linearGradient id="paint0_linear_27_577" x1="381.502" y1="446" x2="382.003" y2="476" gradientUnits="userSpaceOnUse">
 <stop stop-color="#ADADAD"/>
