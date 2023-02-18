@@ -1,6 +1,7 @@
 .exhauster-story {
   position: relative;
   height: 100%;
+  border-radius: 0 0 5px 5px;
 
   font-family: "GT Eesti Pro Display", Arial, sans-serif;
   font-style: normal;

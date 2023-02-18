@@ -16,6 +16,7 @@ function App() {
   const [updateDataDelay, setUpdateDataDelay] = useState("");
   const [dataDate, setDataDate] = useState("");
   const [isLoading, setIsLoading] = useState(true);
+  const [fullData, setfullData] = useState([]);
 
   // Рассчитываем задержку получения данных.
   function getDataDelay(dataDate) {
@@ -59,8 +60,9 @@ function App() {
     mainApi.getdata()
       .then((userData) => {
         getLastData(userData);
+        setfullData(userData);
         console.log("userData", userData);
-        console.log("Получили новые данные");
+        // console.log("Получили новые данные");
       })
       .catch((err) => {
         console.log("err", err);
@@ -91,7 +93,7 @@ function App() {
         <Routes>
           <Route path='/' element={<Main dataDate={dataDate} updateDataDelay={updateDataDelay} isLoading={isLoading} />} />
           <Route path='/exhauster' element={<ExhausterPage dataDate={dataDate} updateDataDelay={updateDataDelay} isLoading={isLoading} />} />
-          <Route path='/trends' element={<Trends dataDate={dataDate} updateDataDelay={updateDataDelay} />} />
+          <Route path='/trends' element={<Trends dataDate={dataDate} updateDataDelay={updateDataDelay} fullData={fullData} isLoading={isLoading} />} />
           <Route path='*' element={<Navigate to="/" />} />
         </Routes>
 
