@@ -3,11 +3,11 @@ import { DataContext } from "../contexts/DataContext";
 import LineChart from '../LineChart/LineChart';
 import ExhausterPanel from '../ExhausterPanel/ExhausterPanel';
 
-function Trends({ updateDataDelay }) {
+function Trends({ dataDate, updateDataDelay }) {
 
   const currentExhausterId = JSON.parse(localStorage.getItem('exhausterId')); // Получаем id нужного эксгаустера.
   const currentDataTest = useContext(DataContext); // Получаем массив данных из контекста.
-
+  console.log("currentDataTest", currentDataTest)
   // Получаем нужный эксгаустер.
   // const exhausterData = currentDataTest.map((item) => item.exhausters).flat().filter((item) => item.id === currentExhausterId)[0];
 
@@ -120,7 +120,7 @@ function Trends({ updateDataDelay }) {
           <div className="main__header-logo"></div>
           <h1 className="section-title">{`Эксгаустер ${exhausterData.name || ""}`}</h1>
         </div>
-        <p className="section-title">Задержка получения данных: {updateDataDelay}</p>
+        <p className="section-title">Данные от: {dataDate} | Задержка получения данных: {updateDataDelay}</p>
       </div> */}
 
         <div className="thrends__container">
