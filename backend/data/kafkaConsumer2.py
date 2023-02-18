@@ -1,4 +1,5 @@
 import json
+import time
 from kafka import KafkaConsumer # pip3 install kafka-python
 import sqlite3
 from datetime import datetime
@@ -38,9 +39,10 @@ except Exception as e:
     for row in cur:
         valuesCount = row[0]
     print( momentsCount, namesCount, valuesCount )
-
+con.close()
 
 for i, message in enumerate(consumer):
+    print(time.ctime(), i, 'started')
     json_message = {}
     with open('outputKafka.json', 'a') as f:
         print(i)
@@ -48,12 +50,17 @@ for i, message in enumerate(consumer):
         json_message = json.loads(message)
         f.write(json.dumps(json_message, indent=4))
         f.write('\n')
+
+    con = sqlite3.connect('Exgauster.db', timeout=10)
+    exelines = []
     for key, value in json_message.items():
         if key == 'moment':
             momentsCount += 1
+            # con = sqlite3.connect('Exgauster.db')
             con.execute("INSERT INTO moments VALUES (?, ?, ?)",
                         (momentsCount, value,
                          datetime.fromisoformat(value).timestamp()))
+            con.commit()
         else:
             cur = con.execute("SELECT nameId FROM names WHERE name == '%s'" % key)
             nameId = None
@@ -64,10 +71,13 @@ for i, message in enumerate(consumer):
                 # fist row of this type
                 namesCount += 1
                 nameId = namesCount
-                con.execute("INSERT INTO names VALUES(?, ?)", (namesCount, key))
+                con.execute("INSERT INTO names VALUES(?, ?)",  (namesCount, key))
             valuesCount += 1
             con.execute("INSERT INTO data VALUES(?, ?, ?, ?)",
                         (valuesCount, momentsCount, nameId, value))
-        con.commit()
+    con.commit()
+    con.close()
+    print(time.ctime(), i, 'consumed')
+
 
 
