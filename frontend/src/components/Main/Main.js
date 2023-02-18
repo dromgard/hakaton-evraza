@@ -2,12 +2,13 @@ import React, { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 import { DataContext } from "../contexts/DataContext";
 import exhausterImage from '../../images/extruder.svg'
+import Preloader from "../Preloader/Preloader";
 
 
-function Main({ dataDate, updateDataDelay }) {
+function Main({ dataDate, updateDataDelay, isLoading }) {
 
   // Получаем массив данных из контекста.
-  const data = useContext(DataContext).Message;
+  const data = useContext(DataContext);
 
   // Обрабатываем уставки. == 0 - красный | == 1 - желтый | == 2 - серый.
   function checkValue(value, maxalarm, minalarm, maxwarn, minwarn) {
@@ -71,7 +72,7 @@ function Main({ dataDate, updateDataDelay }) {
 
   return (
     <>
-      {data && <main className="main">
+      {isLoading ? <Preloader /> : <main className="main">
         <div className="main__header">
           <div className="main__header-info">
             <div className="main__header-logo"></div>

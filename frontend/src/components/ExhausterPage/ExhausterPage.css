@@ -725,14 +725,14 @@ p {
   border-radius: 2px;
 }
 
-.exhauster-story__sensor-gate-valve{
+.exhauster-story__sensor-gate-valve {
   position: absolute;
 
   left: 420px;
   top: 726px;
 }
 
-.exhauster-story__sensor-gate-valve-line{
+.exhauster-story__sensor-gate-valve-line {
   display: flex;
   justify-content: right;
 
@@ -745,12 +745,10 @@ p {
   top: 735px;
 }
 
-.exhauster-story__sensor-gate-valve-line-start{
+.exhauster-story__sensor-gate-valve-line-start {
   width: 105px;
   height: 10px;
-  background-color: #4A8F40;
-
-
+  background-color: #4a8f40;
 }
 
 /* Полоска Температура газа*/

@@ -5,8 +5,9 @@ import Header from "../Header/Header";
 import Main from "../Main/Main";
 import ExhausterPage from "../ExhausterPage/ExhausterPage";
 import Trends from "../Trends/Trends";
-import { dataTest } from "../../utils/dataTest";
 import { dataTestKafka } from "../../utils/dataTest";
+import { mainApi } from "../../utils/MainApi";
+
 
 function App() {
 
@@ -14,6 +15,7 @@ function App() {
   const [currentDataTest, setCurrentDataTest] = useState({});
   const [updateDataDelay, setUpdateDataDelay] = useState("");
   const [dataDate, setDataDate] = useState("");
+  const [isLoading, setIsLoading] = useState(true);
 
   // Рассчитываем задержку получения данных.
   function getDataDelay(dataDate) {
@@ -25,8 +27,8 @@ function App() {
     const diff = now.getTime() - lastDate.getTime();
 
     // Высчитываем минуты и секунды.
-    const diffMinutes = Math.floor(diff / (1000 * 60))
-    const diffSeconds = Math.floor(diff / 1000) % 60;
+    const diffMinutes = Math.floor(diff / (1000 * 60) - 180)
+    const diffSeconds = Math.floor((diff - 10800) / 1000) % 60;
 
     // Рендерим строки и записываем результат в стейт.
     const renderMinutes = diffMinutes === 0 ? '' : `${diffMinutes}мин. `;
@@ -34,26 +36,43 @@ function App() {
     setUpdateDataDelay(`${renderMinutes}${renderSeconds}`)
   }
 
-
   // Получаем из массива данных самые последние данные. И записываем в стэйт.
   function getLastData(data) {
     // Находим максимальныю дату в массиве данных с бэка.
-    const latestDate = new Date(Math.max.apply(null, data.map(item => new Date(item["Message"]["moment"]))));
+    const latestDate = new Date(Math.max.apply(null, data.map(item => new Date(item["moment"]))));
 
     // Записываем дату данных в стейт.
     setDataDate(latestDate.toLocaleString());
 
     // Находим элемент массива с самой актуальной информацией.
-    const lastDateElement = data.find(item => new Date(item["Message"]["moment"]).getTime() === latestDate.getTime())
+    const lastDateElement = data.find(item => new Date(item["moment"]).getTime() === latestDate.getTime())
 
-    setCurrentDataTest(lastDateElement) // Записываем актальные данные в контекст.
+    setCurrentDataTest(lastDateElement) // Записываем актуальные данные в контекст.
     getDataDelay(latestDate) // Уходим рассчитывать задержку получения данных.
+    setIsLoading(false);
+  }
+
+  function getData() {
+    mainApi.getdata()
+      .then((userData) => {
+        getLastData(userData);
+        console.log("userData", userData);
+      })
+      .catch((err) => {
+        console.log("err", err);
+        getLastData(dataTestKafka);
+      });
   }
 
   // Отслеживаем изменение данных и обновляем стэйт.
   useEffect(() => {
-    getLastData(dataTestKafka);
+    // getLastData(dataTestKafka);
+    getData()
+
   }, [])
+
+
+
 
   return (
     // Прокидываем стэйт с данным по все компоненты.
@@ -66,8 +85,8 @@ function App() {
 
         {/* А отсюда начинается роутинг */}
         <Routes>
-          <Route path='/' element={<Main dataDate={dataDate} updateDataDelay={updateDataDelay} />} />
-          <Route path='/exhauster' element={<ExhausterPage dataDate={dataDate} updateDataDelay={updateDataDelay} />} />
+          <Route path='/' element={<Main dataDate={dataDate} updateDataDelay={updateDataDelay} isLoading={isLoading} />} />
+          <Route path='/exhauster' element={<ExhausterPage dataDate={dataDate} updateDataDelay={updateDataDelay} isLoading={isLoading} />} />
           <Route path='/trends' element={<Trends dataDate={dataDate} updateDataDelay={updateDataDelay} />} />
           <Route path='*' element={<Navigate to="/" />} />
         </Routes>
