@@ -41,8 +41,11 @@ function App() {
     // Находим максимальныю дату в массиве данных с бэка.
     const latestDate = new Date(Math.max.apply(null, data.map(item => new Date(item["moment"]))));
 
+    // Модифицируем под временную зону +3.
+    const normTimeZone = new Date(latestDate.getTime() + 3 * 3600 * 1000);
+
     // Записываем дату данных в стейт.
-    setDataDate(latestDate.toLocaleString());
+    setDataDate(normTimeZone.toLocaleString());
 
     // Находим элемент массива с самой актуальной информацией.
     const lastDateElement = data.find(item => new Date(item["moment"]).getTime() === latestDate.getTime())
@@ -57,6 +60,7 @@ function App() {
       .then((userData) => {
         getLastData(userData);
         console.log("userData", userData);
+        console.log("Получили новые данные");
       })
       .catch((err) => {
         console.log("err", err);

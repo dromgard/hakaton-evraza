@@ -15,9 +15,6 @@ function ExhausterPage({ dataDate, updateDataDelay, isLoading }) {
 
   const data = useContext(DataContext);
 
-  console.log(data["SM_Exgauster\\[2:35]"])
-
-
   // Переменные
   // {1}
   let exhauster_name
@@ -728,7 +725,7 @@ function ExhausterPage({ dataDate, updateDataDelay, isLoading }) {
       main_drive_rotor_voltage = data["SM_Exgauster\\[1:4]"]
       main_drive_stator_current = data["SM_Exgauster\\[1:3]"]
       main_drive_stator_voltage = data["SM_Exgauster\\[1:5]"]
-      oil_system_oil_level = data["SM_Exgauster\\[1:0]"]  ? data["SM_Exgauster\\[1:0]"] : 40// Маслосистема
+      oil_system_oil_level = data["SM_Exgauster\\[1:0]"] ? data["SM_Exgauster\\[1:0]"] : 40// Маслосистема
       oil_system_oil_pressure = data["SM_Exgauster\\[1:1]"] ? data["SM_Exgauster\\[1:1]"] : 2
       exhauster_work = data["SM_Exgauster\\[0.0]"]// Работа эксгаустера
       break;
@@ -1106,8 +1103,6 @@ function ExhausterPage({ dataDate, updateDataDelay, isLoading }) {
       break;
   }
 
-  console.log('temp', typeof bearing9_HeatingTem_temperature)
-
   return (
 
     <>
@@ -1146,7 +1141,7 @@ function ExhausterPage({ dataDate, updateDataDelay, isLoading }) {
               <div className="exhauster-story__sensor-N9-body">
                 <div className={`exhauster-story__sensor-N9-body-date ${checkValue(bearing9_HeatingTem_temperature, bearing9_HeatingTem_alarm_max, bearing9_HeatingTem_alarm_min, bearing9_HeatingTem_warning_max, bearing9_HeatingTem_warning_min) === 2 ? '' : checkValue(bearing9_HeatingTem_temperature, bearing9_HeatingTem_alarm_max, bearing9_HeatingTem_alarm_min, bearing9_HeatingTem_warning_max, bearing9_HeatingTem_warning_min) === 1 ? 'sensor-color_warning' : 'sensor-color_critical'}`}>
                   <p>T,°C</p>
-                  <p>{ Number(bearing9_HeatingTem_temperature).toFixed(2)}</p>
+                  <p>{Number(bearing9_HeatingTem_temperature).toFixed(2)}</p>
                 </div>
               </div>
             </div>
@@ -1254,19 +1249,19 @@ function ExhausterPage({ dataDate, updateDataDelay, isLoading }) {
               <div className="exhauster-story__sensor-N2-body">
                 <div className={`exhauster-story__sensor-N2-body-date ${checkValue(bearing2_HeatingTem_temperature, bearing2_HeatingTem_alarm_max, bearing2_HeatingTem_alarm_min, bearing2_HeatingTem_warning_max, bearing2_HeatingTem_warning_min) === 2 ? '' : checkValue(bearing2_HeatingTem_temperature, bearing2_HeatingTem_alarm_max, bearing2_HeatingTem_alarm_min, bearing2_HeatingTem_warning_max, bearing2_HeatingTem_warning_min) === 1 ? 'sensor-color_warning' : 'sensor-color_critical'}`}>
                   <p>T,°C</p>
-                  <p>{ Number(bearing2_HeatingTem_temperature).toFixed(2)}</p>
+                  <p>{Number(bearing2_HeatingTem_temperature).toFixed(2)}</p>
                 </div>
                 <div className={`exhauster-story__sensor-N2-body-date ${checkValue(bearing2_vibration_axial, bearing2_vibration_axial_alarm_max, bearing2_vibration_axial_alarm_min, bearing2_vibration_axial_warning_max, bearing2_vibration_axial_warning_min) === 2 ? '' : checkValue(bearing2_vibration_axial, bearing2_vibration_axial_alarm_max, bearing2_vibration_axial_alarm_min, bearing2_vibration_axial_warning_max, bearing2_vibration_axial_warning_min) === 1 ? 'sensor-color_warning' : 'sensor-color_critical'}`}>
                   <p>В, мм/c</p>
-                  <p>{ Number(bearing2_vibration_axial).toFixed(2)}</p>
+                  <p>{Number(bearing2_vibration_axial).toFixed(2)}</p>
                 </div>
                 <div className={`exhauster-story__sensor-N2-body-date ${checkValue(bearing2_vibration_horizontal, bearing2_vibration_horizontal_alarm_max, bearing2_vibration_horizontal_alarm_min, bearing2_vibration_horizontal_warning_max, bearing2_vibration_horizontal_warning_min) === 2 ? '' : checkValue(bearing2_vibration_horizontal, bearing2_vibration_horizontal_alarm_max, bearing2_vibration_horizontal_alarm_min, bearing2_vibration_horizontal_warning_max, bearing2_vibration_horizontal_warning_min) === 1 ? 'sensor-color_warning' : 'sensor-color_critical'}`}>
                   <p>Г, мм/c</p>
-                  <p>{ Number(bearing2_vibration_horizontal).toFixed(2)}</p>
+                  <p>{Number(bearing2_vibration_horizontal).toFixed(2)}</p>
                 </div>
                 <div className={`exhauster-story__sensor-N2-body-date ${checkValue(bearing2_vibration_vertical, bearing2_vibration_vertical_alarm_max, bearing2_vibration_vertical_alarm_min, bearing2_vibration_vertical_warning_max, bearing2_vibration_vertical_warning_min) === 2 ? '' : checkValue(bearing2_vibration_vertical, bearing2_vibration_vertical_alarm_max, bearing2_vibration_vertical_alarm_min, bearing2_vibration_vertical_warning_max, bearing2_vibration_vertical_warning_min) === 1 ? 'sensor-color_warning' : 'sensor-color_critical'}`}>
                   <p>O, мм/c</p>
-                  <p>{ Number(bearing2_vibration_vertical).toFixed(2)}</p>
+                  <p>{Number(bearing2_vibration_vertical).toFixed(2)}</p>
                 </div>
               </div>
             </div>
@@ -1278,19 +1273,19 @@ function ExhausterPage({ dataDate, updateDataDelay, isLoading }) {
               <div className="exhauster-story__sensor-N1-body">
                 <div className={`exhauster-story__sensor-N1-body-date ${checkValue(bearing1_HeatingTem_temperature, bearing1_HeatingTem_alarm_max, bearing1_HeatingTem_alarm_min, bearing1_HeatingTem_warning_max, bearing1_HeatingTem_warning_min) === 2 ? '' : checkValue(bearing1_HeatingTem_temperature, bearing1_HeatingTem_alarm_max, bearing1_HeatingTem_alarm_min, bearing1_HeatingTem_warning_max, bearing1_HeatingTem_warning_min) === 1 ? 'sensor-color_warning' : 'sensor-color_critical'}`}>
                   <p>T,°C</p>
-                  <p>{ Number(bearing1_HeatingTem_temperature).toFixed(2)}</p>
+                  <p>{Number(bearing1_HeatingTem_temperature).toFixed(2)}</p>
                 </div>
                 <div className={`exhauster-story__sensor-N1-body-date ${checkValue(bearing1_vibration_axial, bearing1_vibration_axial_alarm_max, bearing1_vibration_axial_alarm_min, bearing1_vibration_axial_warning_max, bearing1_vibration_axial_warning_min) === 2 ? '' : checkValue(bearing1_vibration_axial, bearing1_vibration_axial_alarm_max, bearing1_vibration_axial_alarm_min, bearing1_vibration_axial_warning_max, bearing1_vibration_axial_warning_min) === 1 ? 'sensor-color_warning' : 'sensor-color_critical'}`}>
                   <p>В, мм/c</p>
-                  <p>{ Number(bearing1_vibration_axial).toFixed(2)}</p>
+                  <p>{Number(bearing1_vibration_axial).toFixed(2)}</p>
                 </div>
                 <div className={`exhauster-story__sensor-N1-body-date ${checkValue(bearing1_vibration_horizontal, bearing1_vibration_horizontal_alarm_max, bearing1_vibration_horizontal_alarm_min, bearing1_vibration_horizontal_warning_max, bearing1_vibration_horizontal_warning_min) === 2 ? '' : checkValue(bearing1_vibration_horizontal, bearing1_vibration_horizontal_alarm_max, bearing1_vibration_horizontal_alarm_min, bearing1_vibration_horizontal_warning_max, bearing1_vibration_horizontal_warning_min) === 1 ? 'sensor-color_warning' : 'sensor-color_critical'}`}>
                   <p>Г, мм/c</p>
-                  <p>{ Number(bearing1_vibration_horizontal).toFixed(2)}</p>
+                  <p>{Number(bearing1_vibration_horizontal).toFixed(2)}</p>
                 </div>
                 <div className={`exhauster-story__sensor-N1-body-date ${checkValue(bearing1_vibration_vertical, bearing1_vibration_vertical_alarm_max, bearing1_vibration_vertical_alarm_min, bearing1_vibration_vertical_warning_max, bearing1_vibration_vertical_warning_min) === 2 ? '' : checkValue(bearing1_vibration_vertical, bearing1_vibration_vertical_alarm_max, bearing1_vibration_vertical_alarm_min, bearing1_vibration_vertical_warning_max, bearing1_vibration_vertical_warning_min) === 1 ? 'sensor-color_warning' : 'sensor-color_critical'}`}>
                   <p>O, мм/c</p>
-                  <p>{ Number(bearing1_vibration_vertical).toFixed(2)}</p>
+                  <p>{Number(bearing1_vibration_vertical).toFixed(2)}</p>
                 </div>
               </div>
             </div>
@@ -1299,16 +1294,16 @@ function ExhausterPage({ dataDate, updateDataDelay, isLoading }) {
 
             {/* Датчики Охладителя */}
             <div className={`exhauster-story__sensor-tem position_tem_1 ${getColorCooler(cooler_oil_temperature_after)}`}>
-              { Number(cooler_oil_temperature_after).toFixed(0)} °C
+              {Number(cooler_oil_temperature_after).toFixed(0)} °C
             </div>
             <div className={`exhauster-story__sensor-tem position_tem_2 ${getColorCooler(cooler_oil_temperature_before)}`}>
-              { Number(cooler_oil_temperature_before).toFixed(0)} °C
+              {Number(cooler_oil_temperature_before).toFixed(0)} °C
             </div>
             <div className={`exhauster-story__sensor-tem position_tem_3 ${getColorCooler(cooler_water_temperature_after)}`}>
-              { Number(cooler_water_temperature_after).toFixed(0)} °C
+              {Number(cooler_water_temperature_after).toFixed(0)} °C
             </div>
             <div className={`exhauster-story__sensor-tem position_tem_4 ${getColorCooler(cooler_water_temperature_before)}`}>
-              { Number(cooler_water_temperature_before).toFixed(0)} °C
+              {Number(cooler_water_temperature_before).toFixed(0)} °C
             </div>
 
             {/* Главный привод  */}
@@ -1356,7 +1351,7 @@ function ExhausterPage({ dataDate, updateDataDelay, isLoading }) {
               <div className="exhauster-story__sensor-gas-body">
                 <div className="exhauster-story__sensor-gas-body-date">
                   <p>разряжение, мм в ст</p>
-                  <span>{ Number(gas_manifold_underpressure_before).toFixed(2)}</span>
+                  <span>{Number(gas_manifold_underpressure_before).toFixed(2)}</span>
                 </div>
                 <div className="exhauster-story__sensor-gas-body-date">
                   <p>уровень газа, кг/м³</p>
@@ -1379,14 +1374,14 @@ function ExhausterPage({ dataDate, updateDataDelay, isLoading }) {
             <div style={{ width: `${setGasTemp(gas_manifold_temperature_before, factorGasTemp, maxGasTemp)}px` }}
               className={`exhauster-story__sensor-graph-gas ${colorGraph_GasTemp(gas_manifold_temperature_before)}`}>
               <p>температура газа, °C</p>
-              <span>{ Number(gas_manifold_temperature_before).toFixed(2)}</span>
+              <span>{Number(gas_manifold_temperature_before).toFixed(2)}</span>
             </div>
 
             {/* График Маслосистема */}
             <div style={{ width: `${setGasTemp(oil_system_oil_level, factorOilLevl, maxOilLevl)}px` }}
               className={`exhauster-story__sensor-graph-oil ${colorGraph_OilLevl(oil_system_oil_level)}`}>
               <p>уровень масла, %C</p>
-              <span>{ Number( oil_system_oil_level).toFixed(1)}</span>
+              <span>{Number(oil_system_oil_level).toFixed(1)}</span>
             </div>
 
             {/* График Давление масла */}

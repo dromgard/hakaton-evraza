@@ -4,9 +4,6 @@ import { Link, useLocation } from "react-router-dom";
 function ExhausterPanel() {
   const { pathname } = useLocation();
 
-  console.log(pathname)
-
-
   return (
     <div className="exhauster-panel">
       <div className="exhauster-container">

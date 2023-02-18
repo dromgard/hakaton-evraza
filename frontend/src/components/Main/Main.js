@@ -65,11 +65,6 @@ function Main({ dataDate, updateDataDelay, isLoading }) {
     })
   }
 
-  // console.log(checkValue(data["SM_Exgauster\\[2:27]"], 75, 30, 65, 0))
-  // data && console.log(data)
-  // console.log(data["SM_Exgauster[2:27]"])
-
-
   return (
     <>
       {isLoading ? <Preloader /> : <main className="main">
@@ -284,7 +279,7 @@ function Main({ dataDate, updateDataDelay, isLoading }) {
                           {/* Подшипник 9 */}
                           {checkValue(data["SM_Exgauster\\[2:35]"], data["SM_Exgauster\\[2:73]"], data["SM_Exgauster\\[2:82]"], data["SM_Exgauster\\[2:91]"], data["SM_Exgauster\\[2:100]"]) === 2 ? null : <li
                             className='exhauster__list-item'>
-                            <p className='exhauster__sensor-name'>№1 п-к</p>
+                            <p className='exhauster__sensor-name'>№9 п-к</p>
                             <div className='exhauster__sensors-container'>
                               <div className={`exhauster__sensor exhauster__sensor_temp ${checkValue(data["SM_Exgauster\\[2:35]"], data["SM_Exgauster\\[2:73]"], data["SM_Exgauster\\[2:82]"], data["SM_Exgauster\\[2:91]"], data["SM_Exgauster\\[2:100]"]) === 2 ? "" : checkValue(data["SM_Exgauster\\[2:35]"], data["SM_Exgauster\\[2:73]"], data["SM_Exgauster\\[2:82]"], data["SM_Exgauster\\[2:91]"], data["SM_Exgauster\\[2:100]"]) === 1 ? "exhauster__sensor_temp-warning" : "exhauster__sensor_temp-critical"}`}>
                                 <span className='exhauster__sensor-key'>T</span>
@@ -414,7 +409,7 @@ function Main({ dataDate, updateDataDelay, isLoading }) {
                           {/* Подшипник 9 */}
                           {checkValue(data["SM_Exgauster\\[2:35]"], data["SM_Exgauster\\[2:73]"], data["SM_Exgauster\\[2:82]"], data["SM_Exgauster\\[2:91]"], data["SM_Exgauster\\[2:100]"]) !== 2 ? null : <li
                             className='exhauster__list-item'>
-                            <p className='exhauster__sensor-name'>№1 п-к</p>
+                            <p className='exhauster__sensor-name'>№9 п-к</p>
                             <div className='exhauster__sensors-container'>
                               <div className={`exhauster__sensor exhauster__sensor_temp ${checkValue(data["SM_Exgauster\\[2:35]"], data["SM_Exgauster\\[2:73]"], data["SM_Exgauster\\[2:82]"], data["SM_Exgauster\\[2:91]"], data["SM_Exgauster\\[2:100]"]) === 2 ? "" : checkValue(data["SM_Exgauster\\[2:35]"], data["SM_Exgauster\\[2:73]"], data["SM_Exgauster\\[2:82]"], data["SM_Exgauster\\[2:91]"], data["SM_Exgauster\\[2:100]"]) === 1 ? "exhauster__sensor_temp-warning" : "exhauster__sensor_temp-critical"}`}>
                                 <span className='exhauster__sensor-key'>T</span>
@@ -590,7 +585,7 @@ function Main({ dataDate, updateDataDelay, isLoading }) {
                           {/* Подшипник 9 */}
                           {checkValue(data["SM_Exgauster\\[2:52]"], data["SM_Exgauster\\[2:109]"], data["SM_Exgauster\\[2:118]"], data["SM_Exgauster\\[2:127]"], data["SM_Exgauster\\[2:136]"]) === 2 ? null : <li
                             className='exhauster__list-item'>
-                            <p className='exhauster__sensor-name'>№1 п-к</p>
+                            <p className='exhauster__sensor-name'>№9 п-к</p>
                             <div className='exhauster__sensors-container'>
                               <div className={`exhauster__sensor exhauster__sensor_temp ${checkValue(data["SM_Exgauster\\[2:52]"], data["SM_Exgauster\\[2:109]"], data["SM_Exgauster\\[2:118]"], data["SM_Exgauster\\[2:127]"], data["SM_Exgauster\\[2:136]"]) === 2 ? "" : checkValue(data["SM_Exgauster\\[2:52]"], data["SM_Exgauster\\[2:109]"], data["SM_Exgauster\\[2:118]"], data["SM_Exgauster\\[2:127]"], data["SM_Exgauster\\[2:136]"]) === 1 ? "exhauster__sensor_temp-warning" : "exhauster__sensor_temp-critical"}`}>
                                 <span className='exhauster__sensor-key'>T</span>
@@ -710,7 +705,7 @@ function Main({ dataDate, updateDataDelay, isLoading }) {
                           {/* Подшипник 9 */}
                           {checkValue(data["SM_Exgauster\\[2:52]"], data["SM_Exgauster\\[2:109]"], data["SM_Exgauster\\[2:118]"], data["SM_Exgauster\\[2:127]"], data["SM_Exgauster\\[2:136]"]) !== 2 ? null : <li
                             className='exhauster__list-item'>
-                            <p className='exhauster__sensor-name'>№1 п-к</p>
+                            <p className='exhauster__sensor-name'>№9 п-к</p>
                             <div className='exhauster__sensors-container'>
                               <div className={`exhauster__sensor exhauster__sensor_temp ${checkValue(data["SM_Exgauster\\[2:52]"], data["SM_Exgauster\\[2:109]"], data["SM_Exgauster\\[2:118]"], data["SM_Exgauster\\[2:127]"], data["SM_Exgauster\\[2:136]"]) === 2 ? "" : checkValue(data["SM_Exgauster\\[2:52]"], data["SM_Exgauster\\[2:109]"], data["SM_Exgauster\\[2:118]"], data["SM_Exgauster\\[2:127]"], data["SM_Exgauster\\[2:136]"]) === 1 ? "exhauster__sensor_temp-warning" : "exhauster__sensor_temp-critical"}`}>
                                 <span className='exhauster__sensor-key'>T</span>
@@ -884,7 +879,7 @@ function Main({ dataDate, updateDataDelay, isLoading }) {
                           {/* Подшипник 9 */}
                           {checkValue(data["SM_Exgauster\\[0:35]"], data["SM_Exgauster\\[0:71]"], data["SM_Exgauster\\[0:80]"], data["SM_Exgauster\\[0:89]"], data["SM_Exgauster\\[0:98]"]) === 2 ? null : <li
                             className='exhauster__list-item'>
-                            <p className='exhauster__sensor-name'>№1 п-к</p>
+                            <p className='exhauster__sensor-name'>№9 п-к</p>
                             <div className='exhauster__sensors-container'>
                               <div className={`exhauster__sensor exhauster__sensor_temp ${checkValue(data["SM_Exgauster\\[0:35]"], data["SM_Exgauster\\[0:71]"], data["SM_Exgauster\\[0:80]"], data["SM_Exgauster\\[0:89]"], data["SM_Exgauster\\[0:98]"]) === 2 ? "" : checkValue(data["SM_Exgauster\\[0:35]"], data["SM_Exgauster\\[0:71]"], data["SM_Exgauster\\[0:80]"], data["SM_Exgauster\\[0:89]"], data["SM_Exgauster\\[0:98]"]) === 1 ? "exhauster__sensor_temp-warning" : "exhauster__sensor_temp-critical"}`}>
                                 <span className='exhauster__sensor-key'>T</span>
@@ -1004,7 +999,7 @@ function Main({ dataDate, updateDataDelay, isLoading }) {
                           {/* Подшипник 9 */}
                           {checkValue(data["SM_Exgauster\\[0:35]"], data["SM_Exgauster\\[0:71]"], data["SM_Exgauster\\[0:80]"], data["SM_Exgauster\\[0:89]"], data["SM_Exgauster\\[0:98]"]) !== 2 ? null : <li
                             className='exhauster__list-item'>
-                            <p className='exhauster__sensor-name'>№1 п-к</p>
+                            <p className='exhauster__sensor-name'>№9 п-к</p>
                             <div className='exhauster__sensors-container'>
                               <div className={`exhauster__sensor exhauster__sensor_temp ${checkValue(data["SM_Exgauster\\[0:35]"], data["SM_Exgauster\\[0:71]"], data["SM_Exgauster\\[0:80]"], data["SM_Exgauster\\[0:89]"], data["SM_Exgauster\\[0:98]"]) === 2 ? "" : checkValue(data["SM_Exgauster\\[0:35]"], data["SM_Exgauster\\[0:71]"], data["SM_Exgauster\\[0:80]"], data["SM_Exgauster\\[0:89]"], data["SM_Exgauster\\[0:98]"]) === 1 ? "exhauster__sensor_temp-warning" : "exhauster__sensor_temp-critical"}`}>
                                 <span className='exhauster__sensor-key'>T</span>
@@ -1169,7 +1164,7 @@ function Main({ dataDate, updateDataDelay, isLoading }) {
                           {/* Подшипник 9 */}
                           {checkValue(data["SM_Exgauster\\[0:52]"], data["SM_Exgauster\\[0:107]"], data["SM_Exgauster\\[0:116]"], data["SM_Exgauster\\[0:125]"], data["SM_Exgauster\\[0:134]"]) === 2 ? null : <li
                             className='exhauster__list-item'>
-                            <p className='exhauster__sensor-name'>№1 п-к</p>
+                            <p className='exhauster__sensor-name'>№9 п-к</p>
                             <div className='exhauster__sensors-container'>
                               <div className={`exhauster__sensor exhauster__sensor_temp ${checkValue(data["SM_Exgauster\\[0:52]"], data["SM_Exgauster\\[0:107]"], data["SM_Exgauster\\[0:116]"], data["SM_Exgauster\\[0:125]"], data["SM_Exgauster\\[0:134]"]) === 2 ? "" : checkValue(data["SM_Exgauster\\[0:52]"], data["SM_Exgauster\\[0:107]"], data["SM_Exgauster\\[0:116]"], data["SM_Exgauster\\[0:125]"], data["SM_Exgauster\\[0:134]"]) === 1 ? "exhauster__sensor_temp-warning" : "exhauster__sensor_temp-critical"}`}>
                                 <span className='exhauster__sensor-key'>T</span>
@@ -1290,7 +1285,7 @@ function Main({ dataDate, updateDataDelay, isLoading }) {
                           {/* Подшипник 9 */}
                           {checkValue(data["SM_Exgauster\\[0:52]"], data["SM_Exgauster\\[0:107]"], data["SM_Exgauster\\[0:116]"], data["SM_Exgauster\\[0:125]"], data["SM_Exgauster\\[0:134]"]) !== 2 ? null : <li
                             className='exhauster__list-item'>
-                            <p className='exhauster__sensor-name'>№1 п-к</p>
+                            <p className='exhauster__sensor-name'>№9 п-к</p>
                             <div className='exhauster__sensors-container'>
                               <div className={`exhauster__sensor exhauster__sensor_temp ${checkValue(data["SM_Exgauster\\[0:52]"], data["SM_Exgauster\\[0:107]"], data["SM_Exgauster\\[0:116]"], data["SM_Exgauster\\[0:125]"], data["SM_Exgauster\\[0:134]"]) === 2 ? "" : checkValue(data["SM_Exgauster\\[0:52]"], data["SM_Exgauster\\[0:107]"], data["SM_Exgauster\\[0:116]"], data["SM_Exgauster\\[0:125]"], data["SM_Exgauster\\[0:134]"]) === 1 ? "exhauster__sensor_temp-warning" : "exhauster__sensor_temp-critical"}`}>
                                 <span className='exhauster__sensor-key'>T</span>
@@ -1464,7 +1459,7 @@ function Main({ dataDate, updateDataDelay, isLoading }) {
                           {/* Подшипник 9 */}
                           {checkValue(data["SM_Exgauster\\[3:35]"], data["SM_Exgauster\\[3:71]"], data["SM_Exgauster\\[3:80]"], data["SM_Exgauster\\[3:89]"], data["SM_Exgauster\\[3:98]"]) === 2 ? null : <li
                             className='exhauster__list-item'>
-                            <p className='exhauster__sensor-name'>№1 п-к</p>
+                            <p className='exhauster__sensor-name'>№9 п-к</p>
                             <div className='exhauster__sensors-container'>
                               <div className={`exhauster__sensor exhauster__sensor_temp ${checkValue(data["SM_Exgauster\\[3:35]"], data["SM_Exgauster\\[3:71]"], data["SM_Exgauster\\[3:80]"], data["SM_Exgauster\\[3:89]"], data["SM_Exgauster\\[3:98]"]) === 2 ? "" : checkValue(data["SM_Exgauster\\[3:35]"], data["SM_Exgauster\\[3:71]"], data["SM_Exgauster\\[3:80]"], data["SM_Exgauster\\[3:89]"], data["SM_Exgauster\\[3:98]"]) === 1 ? "exhauster__sensor_temp-warning" : "exhauster__sensor_temp-critical"}`}>
                                 <span className='exhauster__sensor-key'>T</span>
@@ -1584,7 +1579,7 @@ function Main({ dataDate, updateDataDelay, isLoading }) {
                           {/* Подшипник 9 */}
                           {checkValue(data["SM_Exgauster\\[3:35]"], data["SM_Exgauster\\[3:71]"], data["SM_Exgauster\\[3:80]"], data["SM_Exgauster\\[3:89]"], data["SM_Exgauster\\[3:98]"]) !== 2 ? null : <li
                             className='exhauster__list-item'>
-                            <p className='exhauster__sensor-name'>№1 п-к</p>
+                            <p className='exhauster__sensor-name'>№9 п-к</p>
                             <div className='exhauster__sensors-container'>
                               <div className={`exhauster__sensor exhauster__sensor_temp ${checkValue(data["SM_Exgauster\\[3:35]"], data["SM_Exgauster\\[3:71]"], data["SM_Exgauster\\[3:80]"], data["SM_Exgauster\\[3:89]"], data["SM_Exgauster\\[3:98]"]) === 2 ? "" : checkValue(data["SM_Exgauster\\[3:35]"], data["SM_Exgauster\\[3:71]"], data["SM_Exgauster\\[3:80]"], data["SM_Exgauster\\[3:89]"], data["SM_Exgauster\\[3:98]"]) === 1 ? "exhauster__sensor_temp-warning" : "exhauster__sensor_temp-critical"}`}>
                                 <span className='exhauster__sensor-key'>T</span>
@@ -1749,7 +1744,7 @@ function Main({ dataDate, updateDataDelay, isLoading }) {
                           {/* Подшипник 9 */}
                           {checkValue(data["SM_Exgauster\\[3:52]"], data["SM_Exgauster\\[3:107]"], data["SM_Exgauster\\[3:116]"], data["SM_Exgauster\\[3:125]"], data["SM_Exgauster\\[3:134]"]) === 2 ? null : <li
                             className='exhauster__list-item'>
-                            <p className='exhauster__sensor-name'>№1 п-к</p>
+                            <p className='exhauster__sensor-name'>№9 п-к</p>
                             <div className='exhauster__sensors-container'>
                               <div className={`exhauster__sensor exhauster__sensor_temp ${checkValue(data["SM_Exgauster\\[3:52]"], data["SM_Exgauster\\[3:107]"], data["SM_Exgauster\\[3:116]"], data["SM_Exgauster\\[3:125]"], data["SM_Exgauster\\[3:134]"]) === 2 ? "" : checkValue(data["SM_Exgauster\\[3:52]"], data["SM_Exgauster\\[3:107]"], data["SM_Exgauster\\[3:116]"], data["SM_Exgauster\\[3:125]"], data["SM_Exgauster\\[3:134]"]) === 1 ? "exhauster__sensor_temp-warning" : "exhauster__sensor_temp-critical"}`}>
                                 <span className='exhauster__sensor-key'>T</span>
@@ -1870,7 +1865,7 @@ function Main({ dataDate, updateDataDelay, isLoading }) {
                           {/* Подшипник 9 */}
                           {checkValue(data["SM_Exgauster\\[3:52]"], data["SM_Exgauster\\[3:107]"], data["SM_Exgauster\\[3:116]"], data["SM_Exgauster\\[3:125]"], data["SM_Exgauster\\[3:134]"]) !== 2 ? null : <li
                             className='exhauster__list-item'>
-                            <p className='exhauster__sensor-name'>№1 п-к</p>
+                            <p className='exhauster__sensor-name'>№9 п-к</p>
                             <div className='exhauster__sensors-container'>
                               <div className={`exhauster__sensor exhauster__sensor_temp ${checkValue(data["SM_Exgauster\\[3:52]"], data["SM_Exgauster\\[3:107]"], data["SM_Exgauster\\[3:116]"], data["SM_Exgauster\\[3:125]"], data["SM_Exgauster\\[3:134]"]) === 2 ? "" : checkValue(data["SM_Exgauster\\[3:52]"], data["SM_Exgauster\\[3:107]"], data["SM_Exgauster\\[3:116]"], data["SM_Exgauster\\[3:125]"], data["SM_Exgauster\\[3:134]"]) === 1 ? "exhauster__sensor_temp-warning" : "exhauster__sensor_temp-critical"}`}>
                                 <span className='exhauster__sensor-key'>T</span>
