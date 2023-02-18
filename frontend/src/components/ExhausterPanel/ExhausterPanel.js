@@ -6,6 +6,7 @@ function ExhausterPanel() {
 
   console.log(pathname)
 
+
   return (
     <div className="exhauster-panel">
       <div className="exhauster-container">

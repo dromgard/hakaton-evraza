@@ -39,6 +39,11 @@
   color: #000000;
 }
 
+.header__nav-link{
+  color: #767676;
+
+}
+
 .header__info {
   display: flex;
   flex-direction: row;

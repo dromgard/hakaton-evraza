@@ -857,7 +857,7 @@ function ExhausterPage({ dataDate, updateDataDelay, isLoading }) {
       exhauster_work = data["SM_Exgauster\\[0.1]"]// Работа эксгаустера
       break;
     case '5':
-      exhauster_name = "X-171"
+      exhauster_name = "Ф-172"
       bearing1_HeatingTem_temperature = data["SM_Exgauster\\[3:27]"] // ПС 1
       bearing1_HeatingTem_alarm_max = data["SM_Exgauster\\[3:63]"]
       bearing1_HeatingTem_alarm_min = data["SM_Exgauster\\[3:72]"]
