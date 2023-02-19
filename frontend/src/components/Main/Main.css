@@ -1,6 +1,8 @@
 .main {
   margin: 10px 10px 0;
+  padding: 0 0 10px;
   background-color: #fff;
+  border-radius: 5px;
 }
 
 .main__header {
@@ -13,6 +15,7 @@
   justify-content: space-between;
   background-color: #fafafa;
   border-bottom: 2px solid #f4f4f4;
+  border-radius: 5px 5px 0 0;
 }
 
 .main__header-info {

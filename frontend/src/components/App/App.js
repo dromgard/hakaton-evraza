@@ -16,6 +16,7 @@ function App() {
   const [updateDataDelay, setUpdateDataDelay] = useState("");
   const [dataDate, setDataDate] = useState("");
   const [isLoading, setIsLoading] = useState(true);
+  const [fullData, setfullData] = useState([]);
 
   // Рассчитываем задержку получения данных.
   function getDataDelay(dataDate) {
@@ -59,24 +60,31 @@ function App() {
     mainApi.getdata()
       .then((userData) => {
         getLastData(userData);
-        console.log("userData", userData);
-        console.log("Получили новые данные");
+        setfullData(userData);
+        // console.log("userData", userData);
+        console.log("Получили новые данные", new Date());
       })
       .catch((err) => {
         console.log("err", err);
         getLastData(dataTestKafka);
+        setfullData(dataTestKafka);
       });
   }
 
-  // Отслеживаем изменение данных и обновляем стэйт.
+  // Обновляем данные каждые 30 секунд.
   useEffect(() => {
-    // getLastData(dataTestKafka);
-    getData()
+    const interval = setInterval(() => {
+      getData();
+    }, 30000);
+    return () => clearInterval(interval);
+  }, []);
+
+
+  // Стартовая загрузка данных.
+  useEffect(() => {
+    getData();
 
   }, [])
-
-
-
 
   return (
     // Прокидываем стэйт с данным по все компоненты.
@@ -91,7 +99,7 @@ function App() {
         <Routes>
           <Route path='/' element={<Main dataDate={dataDate} updateDataDelay={updateDataDelay} isLoading={isLoading} />} />
           <Route path='/exhauster' element={<ExhausterPage dataDate={dataDate} updateDataDelay={updateDataDelay} isLoading={isLoading} />} />
-          <Route path='/trends' element={<Trends dataDate={dataDate} updateDataDelay={updateDataDelay} />} />
+          <Route path='/trends' element={<Trends dataDate={dataDate} updateDataDelay={updateDataDelay} fullData={fullData} isLoading={isLoading} />} />
           <Route path='*' element={<Navigate to="/" />} />
         </Routes>
 
