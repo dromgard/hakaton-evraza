@@ -5,7 +5,6 @@ import Header from "../Header/Header";
 import Main from "../Main/Main";
 import ExhausterPage from "../ExhausterPage/ExhausterPage";
 import Trends from "../Trends/Trends";
-import { dataTestKafka } from "../../utils/dataTest";
 import { mainApi } from "../../utils/MainApi";
 
 
@@ -28,6 +27,7 @@ function App() {
     const diff = now.getTime() - lastDate.getTime();
 
     // Высчитываем минуты и секунды.
+    // const diffMinutes = Math.floor(diff / (1000 * 60) - 180)
     const diffMinutes = Math.floor(diff / (1000 * 60) - 180)
     const diffSeconds = Math.floor((diff - 10800) / 1000) % 60;
 
@@ -61,13 +61,11 @@ function App() {
       .then((userData) => {
         getLastData(userData);
         setfullData(userData);
-        // console.log("userData", userData);
+        console.log("userData", userData);
         console.log("Получили новые данные", new Date());
       })
       .catch((err) => {
         console.log("err", err);
-        getLastData(dataTestKafka);
-        setfullData(dataTestKafka);
       });
   }
 
