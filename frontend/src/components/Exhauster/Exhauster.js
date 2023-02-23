@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom'
 import { useState } from "react";
 import exhausterImage from '../../images/extruder.svg'
+import { checkTemperature, checkVibration } from '../../utils/checkValues';
 
 function Exhauster({ data }) {
 
@@ -14,31 +15,22 @@ function Exhauster({ data }) {
   const warningsMarkup = [];
   const bearingsMarkup = [];
 
-  function checkTemperature(value) {
-    if (value >= 40 && value < 60) return 1 // Предупреждение.
-    if (value >= 60) return 0 // Критическое.
-    return 2 // Все хорошо.
-  }
-
-  function checkVibration(value) {
-    if (value >= 40 && value < 60) return 1 // Предупреждение.
-    if (value >= 60) return 0 // Критическое.
-    return 2 // Все хорошо.
-  }
-
   // Отбираем только нужные для рендера сенсоры.
   const sensorsToRender = sensors.filter(item => item.id <= 9);
 
   // Рендерим сенсоры в зависимости от статуса.
   sensorsToRender.forEach((item) => {
-    const temperatureStatus = checkTemperature(item.temperature);
-    const vibrationStatus = checkVibration(item.vibrationAxial);
+    const { temperature, vibrationAxial, id, name } = item;
+
+    // Получаем статус сенсоров температуры и вибрации.
+    const temperatureStatus = checkTemperature(temperature);
+    const vibrationStatus = checkVibration(vibrationAxial);
 
     // Если хотя бы один сенсор имеет негативный статус (не равен 2) - добавляем в массив "Предупреждение" - warningsMarkup.
     temperatureStatus !== 2 || vibrationStatus !== 2 ? warningsMarkup.push(<li
-      key={item.id}
+      key={id}
       className='exhauster__list-item'>
-      <p className='exhauster__sensor-name'>{item.name}</p>
+      <p className='exhauster__sensor-name'>{name}</p>
       <div className='exhauster__sensors-container'>
         <div className={`exhauster__sensor exhauster__sensor_temp ${temperatureStatus === 2 ? "" : temperatureStatus === 1 ? "exhauster__sensor_temp-warning" : "exhauster__sensor_temp-critical"}`}>
           <span className='exhauster__sensor-key'>T</span>
@@ -51,9 +43,9 @@ function Exhauster({ data }) {
       // В противном случае добавляем в массив "Подшипники" - warningsMarkup.
       :
       bearingsMarkup.push(<li
-        key={item.id}
+        key={id}
         className='exhauster__list-item'>
-        <p className='exhauster__sensor-name'>{item.name}</p>
+        <p className='exhauster__sensor-name'>{name}</p>
         <div className='exhauster__sensors-container'>
           <div className='exhauster__sensor exhauster__sensor_temp'>
             <span className='exhauster__sensor-key'>T</span>
