@@ -5,13 +5,13 @@ import Header from "../Header/Header";
 import Main from "../Main/Main";
 import ExhausterPage from "../ExhausterPage/ExhausterPage";
 import Trends from "../Trends/Trends";
-import { mainApi } from "../../utils/MainApi";
+import { data } from "../../utils/dataTest";
 
 
 function App() {
 
   // Стэйт для данных с бекэнда (или для тестовых данных).
-  const [currentDataTest, setCurrentDataTest] = useState({});
+  const [currentData, setCurrentData] = useState(data);
   const [updateDataDelay, setUpdateDataDelay] = useState("");
   const [dataDate, setDataDate] = useState("");
   const [isLoading, setIsLoading] = useState(true);
@@ -38,55 +38,60 @@ function App() {
   }
 
   // Получаем из массива данных самые последние данные. И записываем в стэйт.
-  function getLastData(data) {
-    // Находим максимальныю дату в массиве данных с бэка.
-    const latestDate = new Date(Math.max.apply(null, data.map(item => new Date(item["moment"]))));
+  // function getLastData(data) {
+  //   // Находим максимальныю дату в массиве данных с бэка.
+  //   const latestDate = new Date(Math.max.apply(null, data.map(item => new Date(item["moment"]))));
 
-    // Модифицируем под временную зону +3.
-    const normTimeZone = new Date(latestDate.getTime() + 3 * 3600 * 1000);
+  //   // Модифицируем под временную зону +3.
+  //   const normTimeZone = new Date(latestDate.getTime() + 3 * 3600 * 1000);
 
-    // Записываем дату данных в стейт.
-    setDataDate(normTimeZone.toLocaleString());
+  //   // Записываем дату данных в стейт.
+  //   setDataDate(normTimeZone.toLocaleString());
 
-    // Находим элемент массива с самой актуальной информацией.
-    const lastDateElement = data.find(item => new Date(item["moment"]).getTime() === latestDate.getTime())
+  //   // Находим элемент массива с самой актуальной информацией.
+  //   const lastDateElement = data.find(item => new Date(item["moment"]).getTime() === latestDate.getTime())
 
-    setCurrentDataTest(lastDateElement) // Записываем актуальные данные в контекст.
-    getDataDelay(latestDate) // Уходим рассчитывать задержку получения данных.
-    setIsLoading(false);
-  }
+  //   setCurrentDataTest(lastDateElement) // Записываем актуальные данные в контекст.
+  //   getDataDelay(latestDate) // Уходим рассчитывать задержку получения данных.
+  //   setIsLoading(false);
+  // }
 
-  function getData() {
-    mainApi.getdata()
-      .then((userData) => {
-        getLastData(userData);
-        setfullData(userData);
-        console.log("userData", userData);
-        console.log("Получили новые данные", new Date());
-      })
-      .catch((err) => {
-        console.log("err", err);
-      });
-  }
+  // function getData() {
+  //   mainApi.getdata()
+  //     .then((userData) => {
+  //       getLastData(userData);
+  //       setfullData(userData);
+  //       console.log("userData", userData);
+  //       console.log("Получили новые данные", new Date());
+  //     })
+  //     .catch((err) => {
+  //       console.log("err", err);
+  //     });
+  // }
 
   // Обновляем данные каждые 30 секунд.
-  useEffect(() => {
-    const interval = setInterval(() => {
-      getData();
-    }, 30000);
-    return () => clearInterval(interval);
-  }, []);
+  // useEffect(() => {
+  //   const interval = setInterval(() => {
+  //     getData();
+  //   }, 30000);
+  //   return () => clearInterval(interval);
+  // }, []);
 
 
   // Стартовая загрузка данных.
-  useEffect(() => {
-    getData();
+  // useEffect(() => {
+  //   getData();
 
-  }, [])
+  // }, [])
+
+  // Отслеживаем изменение данных и обновляем стэйт.
+  useEffect(() => {
+    setCurrentData(data);
+  }, data)
 
   return (
     // Прокидываем стэйт с данным по все компоненты.
-    <DataContext.Provider value={currentDataTest}>
+    <DataContext.Provider value={currentData}>
 
       <div className="app">
 
@@ -95,7 +100,7 @@ function App() {
 
         {/* А отсюда начинается роутинг */}
         <Routes>
-          <Route path='/' element={<Main dataDate={dataDate} updateDataDelay={updateDataDelay} isLoading={isLoading} />} />
+          <Route path='/' element={<Main dataDate={dataDate} updateDataDelay={updateDataDelay} />} />
           <Route path='/exhauster' element={<ExhausterPage dataDate={dataDate} updateDataDelay={updateDataDelay} isLoading={isLoading} />} />
           <Route path='/trends' element={<Trends dataDate={dataDate} updateDataDelay={updateDataDelay} fullData={fullData} isLoading={isLoading} />} />
           <Route path='*' element={<Navigate to="/" />} />

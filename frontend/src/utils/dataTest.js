@@ -13,7 +13,7 @@ export const data = [
           {
             id: 0,
             name: "№1 п-к",
-            temperature: 40,
+            temperature: 10,
             vibrationAxial: 10,
             vibrationHorizontal: 10,
             vibrationVertical: 10,
@@ -21,7 +21,7 @@ export const data = [
           {
             id: 1,
             name: "№2 п-к",
-            temperature: 40,
+            temperature: 10,
             vibrationAxial: 10,
             vibrationHorizontal: 10,
             vibrationVertical: 10,
@@ -29,7 +29,7 @@ export const data = [
           {
             id: 2,
             name: "№3 п-к",
-            temperature: 40,
+            temperature: 10,
             vibrationAxial: 10,
             vibrationHorizontal: 10,
             vibrationVertical: 10,
@@ -37,7 +37,7 @@ export const data = [
           {
             id: 3,
             name: "№4 п-к",
-            temperature: 40,
+            temperature: 10,
             vibrationAxial: 10,
             vibrationHorizontal: 10,
             vibrationVertical: 10,
@@ -45,7 +45,7 @@ export const data = [
           {
             id: 4,
             name: "№5 п-к",
-            temperature: 40,
+            temperature: 10,
             vibrationAxial: 10,
             vibrationHorizontal: 10,
             vibrationVertical: 10,
@@ -53,7 +53,7 @@ export const data = [
           {
             id: 5,
             name: "№6 п-к",
-            temperature: 40,
+            temperature: 10,
             vibrationAxial: 10,
             vibrationHorizontal: 10,
             vibrationVertical: 10,
@@ -61,7 +61,7 @@ export const data = [
           {
             id: 6,
             name: "№7 п-к",
-            temperature: 40,
+            temperature: 10,
             vibrationAxial: 10,
             vibrationHorizontal: 10,
             vibrationVertical: 10,
@@ -69,7 +69,7 @@ export const data = [
           {
             id: 7,
             name: "№8 п-к",
-            temperature: 40,
+            temperature: 10,
             vibrationAxial: 10,
             vibrationHorizontal: 10,
             vibrationVertical: 10,
@@ -77,15 +77,7 @@ export const data = [
           {
             id: 8,
             name: "№9 п-к",
-            temperature: 40,
-            vibrationAxial: 10,
-            vibrationHorizontal: 10,
-            vibrationVertical: 10,
-          },
-          {
-            id: 9,
-            name: "№9 п-к",
-            temperature: 40,
+            temperature: 10,
             vibrationAxial: 10,
             vibrationHorizontal: 10,
             vibrationVertical: 10,
@@ -196,14 +188,6 @@ export const data = [
           },
           {
             id: 8,
-            name: "№9 п-к",
-            temperature: 40,
-            vibrationAxial: 10,
-            vibrationHorizontal: 10,
-            vibrationVertical: 10,
-          },
-          {
-            id: 9,
             name: "№9 п-к",
             temperature: 40,
             vibrationAxial: 10,
@@ -329,14 +313,6 @@ export const data = [
             vibrationVertical: 10,
           },
           {
-            id: 9,
-            name: "№9 п-к",
-            temperature: 40,
-            vibrationAxial: 10,
-            vibrationHorizontal: 10,
-            vibrationVertical: 10,
-          },
-          {
             id: 10,
             name: "Охладитель",
             temperatureBefore: 40,
@@ -442,14 +418,6 @@ export const data = [
           },
           {
             id: 8,
-            name: "№9 п-к",
-            temperature: 40,
-            vibrationAxial: 10,
-            vibrationHorizontal: 10,
-            vibrationVertical: 10,
-          },
-          {
-            id: 9,
             name: "№9 п-к",
             temperature: 40,
             vibrationAxial: 10,
@@ -575,14 +543,6 @@ export const data = [
             vibrationVertical: 10,
           },
           {
-            id: 9,
-            name: "№9 п-к",
-            temperature: 40,
-            vibrationAxial: 10,
-            vibrationHorizontal: 10,
-            vibrationVertical: 10,
-          },
-          {
             id: 10,
             name: "Охладитель",
             temperatureBefore: 40,
@@ -688,14 +648,6 @@ export const data = [
           },
           {
             id: 8,
-            name: "№9 п-к",
-            temperature: 40,
-            vibrationAxial: 10,
-            vibrationHorizontal: 10,
-            vibrationVertical: 10,
-          },
-          {
-            id: 9,
             name: "№9 п-к",
             temperature: 40,
             vibrationAxial: 10,

@@ -7,59 +7,73 @@ function Exhauster({ data }) {
   const { name, rotorNumber, rotorDate, rotorReplace, rotorPrognosys, sensors } = data;
 
   // Открываем и закрываем списки датчиков.
-  const [isWarningOpen, setIsWarningOpen] = useState(true);
+  const [isWarningsOpen, setIsWarningsOpen] = useState(true);
   const [isBearingsOpen, setIsBearingsOpen] = useState(false);
 
-  // Разметка для блока "Предупреждение".
-  const warningsMarkup = sensors.map((item) => {
+  // Разметка для блока "Предупреждение" и "Подшипники"
+  const warningsMarkup = [];
+  const bearingsMarkup = [];
 
-    if (item.temperature !== 2 || item.pressure !== 2) return (<li
+  function checkTemperature(value) {
+    if (value >= 40 && value < 60) return 1 // Предупреждение.
+    if (value >= 60) return 0 // Критическое.
+    return 2 // Все хорошо.
+  }
+
+  function checkVibration(value) {
+    if (value >= 40 && value < 60) return 1 // Предупреждение.
+    if (value >= 60) return 0 // Критическое.
+    return 2 // Все хорошо.
+  }
+
+  // Отбираем только нужные для рендера сенсоры.
+  const sensorsToRender = sensors.filter(item => item.id <= 9);
+
+  // Рендерим сенсоры в зависимости от статуса.
+  sensorsToRender.forEach((item) => {
+    const temperatureStatus = checkTemperature(item.temperature);
+    const vibrationStatus = checkVibration(item.vibrationAxial);
+
+    // Если хотя бы один сенсор имеет негативный статус (не равен 2) - добавляем в массив "Предупреждение" - warningsMarkup.
+    temperatureStatus !== 2 || vibrationStatus !== 2 ? warningsMarkup.push(<li
       key={item.id}
       className='exhauster__list-item'>
       <p className='exhauster__sensor-name'>{item.name}</p>
       <div className='exhauster__sensors-container'>
-        <div className={`exhauster__sensor ${item.temperature === 2 ? "" : item.temperature === 1 ? "exhauster__sensor_warning" : "exhauster__sensor_critical"}`}>
-          <span className='exhauster__sensor-key'>T {item.temperature}</span>
+        <div className={`exhauster__sensor exhauster__sensor_temp ${temperatureStatus === 2 ? "" : temperatureStatus === 1 ? "exhauster__sensor_temp-warning" : "exhauster__sensor_temp-critical"}`}>
+          <span className='exhauster__sensor-key'>T</span>
         </div>
-        <div className={`exhauster__sensor ${item.pressure === 2 ? "" : item.pressure === 1 ? "exhauster__sensor_warning" : "exhauster__sensor_critical"}`}>
-          <span className='exhauster__sensor-key'>V {item.pressure}</span>
-        </div>
-      </div>
-    </li>)
-
-    return null;
-  }).filter((item) => item !== null);
-
-  // Записываем статус наличия Предупреждений.
-  const isWarnings = warningsMarkup.length !== 0;
-
-  // Разметка для блока "Подшипники".
-  const bearingsMarkup = sensors.map((item) => {
-
-    if (item.temperature === 2 && item.pressure === 2) return (<li
-      key={item.id}
-      className='exhauster__list-item'>
-      <p className='exhauster__sensor-name'>{item.name}</p>
-      <div className='exhauster__sensors-container'>
-        <div className='exhauster__sensor'>
-          <span className='exhauster__sensor-key'>T {item.temperature}</span>
-        </div>
-        <div className='exhauster__sensor'>
-          <span className='exhauster__sensor-key'>V {item.pressure}</span>
+        <div className={`exhauster__sensor exhauster__sensor_vibration ${vibrationStatus === 2 ? "" : vibrationStatus === 1 ? "exhauster__sensor_vibration-warning" : "exhauster__sensor_vibration-critical"}`}>
+          <span className='exhauster__sensor-key'>V</span>
         </div>
       </div>
     </li>)
-
-    return null;
-
+      // В противном случае добавляем в массив "Подшипники" - warningsMarkup.
+      :
+      bearingsMarkup.push(<li
+        key={item.id}
+        className='exhauster__list-item'>
+        <p className='exhauster__sensor-name'>{item.name}</p>
+        <div className='exhauster__sensors-container'>
+          <div className='exhauster__sensor exhauster__sensor_temp'>
+            <span className='exhauster__sensor-key'>T</span>
+          </div>
+          <div className='exhauster__sensor exhauster__sensor_vibration'>
+            <span className='exhauster__sensor-key'>V</span>
+          </div>
+        </div>
+      </li>)
   })
+
+  // Если массив "Предупреждение" не пустой, значит предупреждения есть -  "false", статус красный.
+  const isWarnings = warningsMarkup.length !== 0;
 
   return (
     <div className="exhauster">
       <div className="exhauster__header">
         <div className="exhauster__header-info">
           <svg height="24" width="24">
-            <circle cx="12" cy="12" r="6" fill={isWarnings ? "red" : "green"} />
+            <circle cx="12" cy="12" r="6" fill={isWarnings ? "#E32112" : "#6EA566"} />
           </svg>
           <p className="exhauster__name">Эксгаустер {name}</p>
         </div>
@@ -98,16 +112,16 @@ function Exhauster({ data }) {
         {warningsMarkup.length > 0 &&
           <div className='exhauster__details'>
             <div className='exhauster__details-header'>
-              <button className={`button exhauster__list-button ${isWarningOpen ? "exhauster__list-button_open" : ""}`}
+              <button className={`button exhauster__list-button ${isWarningsOpen ? "exhauster__list-button_open" : ""}`}
                 type="button"
                 aria-label="Открыть список"
                 title="Открыть список"
-                onClick={() => setIsWarningOpen(!isWarningOpen)}>&gt;</button>
+                onClick={() => setIsWarningsOpen(!isWarningsOpen)}>&gt;</button>
               <h5 className="exhauster__warning-title"><b>Предупреждение</b></h5>
             </div>
 
             {/* Датчики */}
-            <ul className={`exhauster__list-container ${isWarningOpen ? "" : "exhauster__list-container_close"}`}>
+            <ul className={`exhauster__list-container ${isWarningsOpen ? "" : "exhauster__list-container_close"}`}>
               {warningsMarkup}
             </ul>
           </div>
