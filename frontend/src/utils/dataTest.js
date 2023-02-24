@@ -1,5 +1,6 @@
-export const data = [
-  {
+export const data = {
+  timeStamp: "Fri Feb 24 2023 13:24:00 GMT+0300",
+  aglomachines: [{
     id: 0,
     number: 1,
     exhausters: [
@@ -688,5 +689,5 @@ export const data = [
         ]
       },
     ]
-  },
-]
+  }]
+}

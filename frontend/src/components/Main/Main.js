@@ -5,7 +5,7 @@ import Aglomachine from "../Aglomachine/Aglomachine";
 function Main({ dataDate, updateDataDelay }) {
 
   // Получаем массив данных из контекста.
-  const data = useContext(DataContext);
+  const { aglomachines: data } = useContext(DataContext);
 
   // Создаем разметку для массива Агломашин.
   const aglomachineMarkup = data.map((item) => (

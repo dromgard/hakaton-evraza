@@ -18,23 +18,30 @@ function App() {
   const [fullData, setfullData] = useState([]);
 
   // Рассчитываем задержку получения данных.
-  function getDataDelay(dataDate) {
+  function getDataDelay(dataTimeStamp) {
     // Получаем дату из данных и текущую дату
-    const lastDate = new Date(dataDate);
+    const lastDate = new Date(dataTimeStamp);
     const now = new Date();
 
     // Высчитываем разницу в миллисекундах.
     const diff = now.getTime() - lastDate.getTime();
 
     // Высчитываем минуты и секунды.
-    // const diffMinutes = Math.floor(diff / (1000 * 60) - 180)
-    const diffMinutes = Math.floor(diff / (1000 * 60) - 180)
-    const diffSeconds = Math.floor((diff - 10800) / 1000) % 60;
+    const diffMinutes = Math.floor(diff / (1000 * 60))
+    const diffSeconds = Math.floor(diff / 1000) % 60;
 
     // Рендерим строки и записываем результат в стейт.
     const renderMinutes = diffMinutes === 0 ? '' : `${diffMinutes}мин. `;
     const renderSeconds = diffSeconds === 0 ? '' : `${diffSeconds}сек.`;
     setUpdateDataDelay(`${renderMinutes}${renderSeconds}`)
+  }
+
+  // Парсим дату и время получения данных и записываем в стэйт.
+  function getDataTime(dataTime) {
+    const date = new Date(dataTime).toLocaleDateString();
+    const time = new Date(dataTime).toLocaleTimeString();
+
+    setDataDate(`${date}, ${time}`)
   }
 
   // Получаем из массива данных самые последние данные. И записываем в стэйт.
@@ -78,16 +85,19 @@ function App() {
   // }, []);
 
 
-  // Стартовая загрузка данных.
-  // useEffect(() => {
-  //   getData();
+  // Рассчитываем дату получения данных и задержку.
+  useEffect(() => {
+    getDataTime(data.timeStamp)
+    getDataDelay(currentData.timeStamp);
 
-  // }, [])
+  }, [])
 
   // Отслеживаем изменение данных и обновляем стэйт.
   useEffect(() => {
     setCurrentData(data);
-  }, data)
+    getDataTime(data.timeStamp)
+    getDataDelay(data.timeStamp);
+  }, [data])
 
   return (
     // Прокидываем стэйт с данным по все компоненты.
