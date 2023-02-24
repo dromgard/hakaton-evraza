@@ -7,8 +7,8 @@ export function checkTemperature(value) {
 }
 
 export function checkVibration(value) {
-  if (value >= 40 && value < 60) return 1;
-  if (value >= 60) return 0;
+  if (value >= 20 && value < 40) return 1;
+  if (value >= 40) return 0;
   return 2;
 }
 

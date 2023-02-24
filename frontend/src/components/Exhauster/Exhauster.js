@@ -5,7 +5,7 @@ import { checkTemperature, checkVibration } from '../../utils/checkValues';
 
 function Exhauster({ data }) {
 
-  const { name, rotorNumber, rotorDate, rotorReplace, rotorPrognosys, sensors } = data;
+  const { name, rotorNumber, rotorDate, rotorPrognosys, sensors } = data;
 
   // Открываем и закрываем списки датчиков.
   const [isWarningsOpen, setIsWarningsOpen] = useState(true);
@@ -17,6 +17,20 @@ function Exhauster({ data }) {
 
   // Отбираем только нужные для рендера сенсоры.
   const sensorsToRender = sensors.filter(item => item.id <= 9);
+
+  // Получаем количество дней работы ротера.
+  function getRotorWorkingTime() {
+    // Получаем дату замены ротора.
+    const [day, month, year] = rotorDate.split(".");
+    const date = new Date(year, month - 1, day);
+
+    // Считаем разницу в миллисекундах
+    const timeDiff = Date.now() - date.getTime();
+
+    const daysDiff = Math.floor(timeDiff / (1000 * 3600 * 24))
+
+    return `${daysDiff} сут`
+  }
 
   // Рендерим сенсоры в зависимости от статуса.
   sensorsToRender.forEach((item) => {
@@ -85,7 +99,7 @@ function Exhauster({ data }) {
         <div className="exhauster__roter-repl">
           <p className="exhauster__roter-repl-title"><b>Последняя замена ротера</b></p>
           <div className="exhauster__roter-repl-container">
-            <p className="exhauster__roter-repl-date"><b>{rotorReplace}</b></p>
+            <p className="exhauster__roter-repl-date"><b>{getRotorWorkingTime()}</b></p>
             <div className="exhauster__roter-repl-date-container">
               <div>
                 <p className="exhauster__roter-repl-date-text">Прогноз</p>

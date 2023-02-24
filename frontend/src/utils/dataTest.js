@@ -7,7 +7,7 @@ export const data = [
         id: 0,
         name: "У-171",
         rotorNumber: "35к",
-        rotorDate: "12.02.2022",
+        rotorDate: "12.02.2023",
         rotorPrognosys: "12 сут",
         sensors: [
           {
@@ -119,14 +119,14 @@ export const data = [
         id: 1,
         name: "У-172",
         rotorNumber: "47",
-        rotorDate: "25.02.2022",
+        rotorDate: "24.02.2023",
         rotorPrognosys: "25 сут",
         sensors: [
           {
             id: 0,
             name: "№1 п-к",
             temperature: 40,
-            vibrationAxial: 10,
+            vibrationAxial: 20,
             vibrationHorizontal: 10,
             vibrationVertical: 10,
           },

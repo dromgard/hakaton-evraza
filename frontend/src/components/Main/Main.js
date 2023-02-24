@@ -14,35 +14,6 @@ function Main({ dataDate, updateDataDelay }) {
     </li>
   ))
 
-  // // Обрабатываем уставки. == 0 - красный | == 1 - желтый | == 2 - серый.
-  // function checkValue(value, maxalarm, minalarm, maxwarn, minwarn) {
-  //   if (value >= minwarn && value <= maxwarn) return 1
-  //   if (value >= minalarm && value <= maxalarm) return 0
-  //   return 2
-  // }
-
-  // // Получаем количество дней работы ротора.
-  // function setRotorWorkingTime(rotor) {
-  //   // Получаем дату замену ротора.
-  //   const [day, month, year] = rotorReplaceDate[rotor].split(".");
-  //   const date = new Date(year, month - 1, day);
-
-  //   // Считаем разницу в миллисекундах
-  //   const timeDiff = Date.now() - date.getTime();
-
-  //   const daysDiff = Math.ceil(timeDiff / (1000 * 3600 * 24))
-
-  //   return `${daysDiff} сут`
-  // }
-
-  // // Обработчик сворачивания списков.
-  // function handleLictClick(id) {
-  //   setIsListOpen({
-  //     ...isListOpen,
-  //     [id]: !isListOpen[id]
-  //   })
-  // }
-
   return (
     <main className="main">
       <div className="main__header">
