@@ -8,7 +8,7 @@ export const data = [
         name: "У-171",
         rotorNumber: "35к",
         rotorDate: "12.02.2023",
-        rotorPrognosys: "12 сут",
+        rotorPrognosys: 13,
         sensors: [
           {
             id: 0,
@@ -120,7 +120,7 @@ export const data = [
         name: "У-172",
         rotorNumber: "47",
         rotorDate: "24.02.2023",
-        rotorPrognosys: "25 сут",
+        rotorPrognosys: 18,
         sensors: [
           {
             id: 0,
@@ -238,7 +238,7 @@ export const data = [
         name: "Ф-171",
         rotorNumber: "37",
         rotorDate: "02.02.2023",
-        rotorPrognosys: "15 сут",
+        rotorPrognosys: 15,
         sensors: [
           {
             id: 0,
@@ -350,7 +350,7 @@ export const data = [
         name: "Ф-172",
         rotorNumber: "57",
         rotorDate: "13.02.2023",
-        rotorPrognosys: "5 сут",
+        rotorPrognosys: 5,
         sensors: [
           {
             id: 0,
@@ -468,7 +468,7 @@ export const data = [
         name: "Х-171",
         rotorNumber: "39",
         rotorDate: "25.01.2023",
-        rotorPrognosys: "12 сут",
+        rotorPrognosys: 12,
         sensors: [
           {
             id: 0,
@@ -580,7 +580,7 @@ export const data = [
         name: "Х-172",
         rotorNumber: "45",
         rotorDate: "06.02.2023",
-        rotorPrognosys: "25 сут",
+        rotorPrognosys: 25,
         sensors: [
           {
             id: 0,

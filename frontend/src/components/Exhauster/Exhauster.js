@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom'
 import { useState } from "react";
 import exhausterImage from '../../images/extruder.svg'
-import { checkTemperature, checkVibration } from '../../utils/checkValues';
+import { checkTemperature, checkVibration, calcPrognosysIndicator } from '../../utils/checkValues';
 
 function Exhauster({ data }) {
 
@@ -14,6 +14,9 @@ function Exhauster({ data }) {
   // Разметка для блока "Предупреждение" и "Подшипники"
   const warningsMarkup = [];
   const bearingsMarkup = [];
+
+  // Индикатор прогнозного времени работы ротера.
+  const rotorPrognosysIndicator = calcPrognosysIndicator(rotorPrognosys);
 
   // Отбираем только нужные для рендера сенсоры.
   const sensorsToRender = sensors.filter(item => item.id <= 9);
@@ -103,11 +106,11 @@ function Exhauster({ data }) {
             <div className="exhauster__roter-repl-date-container">
               <div>
                 <p className="exhauster__roter-repl-date-text">Прогноз</p>
-                <p className="exhauster__roter-repl-date-prognosys"><b>{rotorPrognosys}</b></p>
+                <p className="exhauster__roter-repl-date-prognosys"><b>{rotorPrognosys} сут</b></p>
               </div>
 
               <svg height="16" width="16">
-                <circle cx="8" cy="8" r="8" fill="#FFC663" />
+                <circle cx="8" cy="8" r="8" fill={rotorPrognosysIndicator === 2 ? "#6EA566" : rotorPrognosysIndicator === 1 ? "#FFC663" : "#E32112"} />
               </svg>
             </div>
           </div>
